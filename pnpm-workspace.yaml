@@ -1,0 +1,5 @@
+packages:
+  - "apps/*"
+  - "packages/flowagent-design/packages/*"
+  - "packages/flowagent-public-component/*"
+  - "packages/*"
