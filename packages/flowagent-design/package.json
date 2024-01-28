@@ -6,7 +6,7 @@
   "author": "IFLOWAGENT Cloud <opensource@flowagentsoft.com>",
   "license": "Apache-2.0",
   "resolutions": {
-    "graceful-fs": "4.2.9"
+    "graceful-fs": "4.2.11"
   },
   "scripts": {
     "build-all-components": "NODE_OPTIONS=--max-old-space-size=10240 turbo run build",
