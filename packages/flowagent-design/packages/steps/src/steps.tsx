@@ -23,15 +23,18 @@ export const Steps = forwardRef<HTMLDivElement, StepsProps>((props, ref) => {
     defaultValue: 0,
   })
 
-  const handleClick = useCallback((index: number, disabled?: boolean) => {
-    if (disabled) {
-      return
-    }
-    if (current === undefined) {
-      setFinalCurrent(index)
-    }
-    onChange?.(index)
-  }, [current, onChange, setFinalCurrent])
+  const handleClick = useCallback(
+    (index: number, disabled?: boolean) => {
+      if (disabled) {
+        return
+      }
+      if (current === undefined) {
+        setFinalCurrent(index)
+      }
+      onChange?.(index)
+    },
+    [current, onChange, setFinalCurrent],
+  )
 
   return (
     <div

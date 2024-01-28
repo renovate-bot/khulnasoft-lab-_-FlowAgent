@@ -24,7 +24,11 @@ import {
   SuccessCircleIcon,
   WarningCircleIcon,
 } from "@flowagent-design/icon"
-import { applyBoxStyle, deleteCssProps, getColor } from "@flowagent-design/theme"
+import {
+  applyBoxStyle,
+  deleteCssProps,
+  getColor,
+} from "@flowagent-design/theme"
 import { TriggerProvider } from "@flowagent-design/trigger"
 import { AnimatePresence, motion } from "framer-motion"
 import React, { forwardRef, ReactNode, useContext, useMemo } from "react"

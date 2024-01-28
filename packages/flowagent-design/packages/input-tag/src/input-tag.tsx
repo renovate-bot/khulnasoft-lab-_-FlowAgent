@@ -21,7 +21,11 @@ import {
 } from "./style"
 import { Tag } from "@flowagent-design/tag"
 import { ClearIcon } from "@flowagent-design/icon"
-import { applyBoxStyle, deleteCssProps, getColor } from "@flowagent-design/theme"
+import {
+  applyBoxStyle,
+  deleteCssProps,
+  getColor,
+} from "@flowagent-design/theme"
 import useMeasure from "react-use-measure"
 import { css } from "@emotion/react"
 

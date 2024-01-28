@@ -105,7 +105,8 @@ export default defineConfig({
           "framer-motion": "framer-motion",
           "@flowagent-design/system": "@flowagent-design/system",
           "@flowagent-design/theme": "@flowagent-design/theme",
-          "@flowagent-design/config-provider": "@flowagent-design/config-provider",
+          "@flowagent-design/config-provider":
+            "@flowagent-design/config-provider",
           "@flowagent-design/avatar": "@flowagent-design/avatar",
           "@flowagent-design/breadcrumb": "@flowagent-design/breadcrumb",
           "@flowagent-design/icon": "@flowagent-design/icon",

@@ -15,7 +15,11 @@ import {
   PreviousDoubleIcon,
   PreviousIcon,
 } from "@flowagent-design/icon"
-import { applyBoxStyle, deleteCssProps, getColor } from "@flowagent-design/theme"
+import {
+  applyBoxStyle,
+  deleteCssProps,
+  getColor,
+} from "@flowagent-design/theme"
 import {
   ConfigProviderContext,
   ConfigProviderProps,

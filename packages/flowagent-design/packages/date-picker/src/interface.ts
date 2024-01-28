@@ -2,7 +2,10 @@ import { ReactNode } from "react"
 import { TriggerPosition, TriggerProps } from "@flowagent-design/trigger"
 import { Dayjs } from "dayjs"
 import { InputColorScheme, InputSize } from "./input/interface"
-import { TimePickerProps, RangePickerProps } from "@flowagent-design/time-picker"
+import {
+  TimePickerProps,
+  RangePickerProps,
+} from "@flowagent-design/time-picker"
 import { BoxProps } from "@flowagent-design/theme"
 
 export type DatePickerModeType = "date" | "month" | "week" | "year" | "quarter"

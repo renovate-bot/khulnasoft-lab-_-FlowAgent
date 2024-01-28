@@ -79,7 +79,9 @@ export function applySwitchDot(
     : `left:${dotSpacing}`
   const dotShadow = disabled
     ? ""
-    : `box-shadow:0 1px 2px ${globalColor(`--${flowagentPrefix}-blackAlpha-05`)}`
+    : `box-shadow:0 1px 2px ${globalColor(
+        `--${flowagentPrefix}-blackAlpha-05`,
+      )}`
   return css`
     display: flex;
     justify-content: center;

@@ -56,7 +56,8 @@ export default defineConfig({
           "@flowagent-design/icon": "@flowagent-design/icon",
           "@flowagent-design/progress": "@flowagent-design/progress",
           "@flowagent-design/system": "@flowagent-design/system",
-          "@flowagent-design/config-provider": "@flowagent-design/config-provider",
+          "@flowagent-design/config-provider":
+            "@flowagent-design/config-provider",
           uuid: "uuid",
         },
       },

@@ -5,7 +5,11 @@ import { isObject, useMergeValue } from "@flowagent-design/system"
 import { DownIcon, LoadingIcon, UpIcon } from "@flowagent-design/icon"
 import { getColor } from "@flowagent-design/theme"
 import { Empty } from "@flowagent-design/empty"
-import { InputTag, InputTagRefHandler, TagObject } from "@flowagent-design/input-tag"
+import {
+  InputTag,
+  InputTagRefHandler,
+  TagObject,
+} from "@flowagent-design/input-tag"
 import { Checkbox } from "@flowagent-design/checkbox"
 import { dropLabelStyle, dropListItemStyle } from "./style"
 

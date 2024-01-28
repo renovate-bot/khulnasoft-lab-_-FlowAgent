@@ -9,7 +9,11 @@ import {
 import { BreadcrumbProps } from "./interface"
 import { breadcrumbContainerStyle, dividerStyle, dotStyle } from "./style"
 import { SlashIcon } from "@flowagent-design/icon"
-import { applyBoxStyle, deleteCssProps, getColor } from "@flowagent-design/theme"
+import {
+  applyBoxStyle,
+  deleteCssProps,
+  getColor,
+} from "@flowagent-design/theme"
 import { BreadcrumbItem } from "./breadcrumbItem"
 import { DropList, DropListItem } from "@flowagent-design/dropdown"
 import { BreadcrumbContext } from "./breadcrumb-context"

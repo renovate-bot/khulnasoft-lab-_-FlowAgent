@@ -61,7 +61,9 @@ export const LineProgress = forwardRef<HTMLDivElement, ProgressProps>(
         break
       case "error":
         statusComponent = (
-          <WarningCircleIcon color={globalColor(`--${flowagentPrefix}-red-03`)} />
+          <WarningCircleIcon
+            color={globalColor(`--${flowagentPrefix}-red-03`)}
+          />
         )
         break
     }

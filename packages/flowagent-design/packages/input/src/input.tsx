@@ -15,7 +15,11 @@ import {
 } from "./style"
 import { useMergeValue } from "@flowagent-design/system"
 import { ClearIcon } from "@flowagent-design/icon"
-import { applyBoxStyle, deleteCssProps, getColor } from "@flowagent-design/theme"
+import {
+  applyBoxStyle,
+  deleteCssProps,
+  getColor,
+} from "@flowagent-design/theme"
 
 export const Input = forwardRef<HTMLDivElement, InputProps>((props, ref) => {
   const {

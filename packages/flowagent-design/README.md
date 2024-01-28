@@ -71,7 +71,7 @@ const App = () => (
 Step 1: Clone locally.
 
 ```bash
-$ git clone https://github.com/khulnasoft-lab/flowagent-design.git
+$ git clone https://github.com/khulnasoft-lab/flowagent.git
 $ cd flowagent-design
 $ pnpm install
 ```

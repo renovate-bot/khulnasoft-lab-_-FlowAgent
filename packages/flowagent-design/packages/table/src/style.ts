@@ -76,14 +76,16 @@ export function applyBorderStyle(
       borderStyle = css``
     } else {
       borderStyle = css`
-        border-right: solid 1px ${globalColor(`--${flowagentPrefix}-grayBlue-08`)};
+        border-right: solid 1px
+          ${globalColor(`--${flowagentPrefix}-grayBlue-08`)};
       `
     }
   }
   let stripedStyle: SerializedStyles = css()
   if (striped) {
     stripedStyle = css`
-      border-bottom: solid 1px ${globalColor(`--${flowagentPrefix}-grayBlue-08`)};
+      border-bottom: solid 1px
+        ${globalColor(`--${flowagentPrefix}-grayBlue-08`)};
     `
   }
   return css(borderStyle, stripedStyle)
@@ -136,7 +138,9 @@ export function applyNormalBg(): SerializedStyles {
 export function applyBgHoverStyle(hoverable?: boolean): SerializedStyles {
   const hoverableStyle = css`
     &:hover {
-      background-color: ${chroma(globalColor(`--${flowagentPrefix}-grayBlue-09`))
+      background-color: ${chroma(
+        globalColor(`--${flowagentPrefix}-grayBlue-09`),
+      )
         .alpha(0.5)
         .hex()};
     }
@@ -333,7 +337,8 @@ export const applyResizerTableHeaderStyle = (
   return enableColumnResizing
     ? css`
         &:hover > tr > th:not(:last-of-type) {
-          border-right: solid 1px ${globalColor(`--${flowagentPrefix}-grayBlue-08`)};
+          border-right: solid 1px
+            ${globalColor(`--${flowagentPrefix}-grayBlue-08`)};
         }
       `
     : css``

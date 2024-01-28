@@ -50,7 +50,8 @@ export default defineConfig({
           "@emotion/react": "@emotion/react",
           "framer-motion": "framer-motion",
           "@flowagent-design/icon": "@flowagent-design/icon",
-          "@flowagent-design/config-provider": "@flowagent-design/config-provider",
+          "@flowagent-design/config-provider":
+            "@flowagent-design/config-provider",
           "@flowagent-design/theme": "@flowagent-design/theme",
           "@flowagent-design/system": "@flowagent-design/system",
           "@floating-ui/react": "@floating-ui/react",

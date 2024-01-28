@@ -17,7 +17,11 @@ import {
 } from "./style"
 import { mergeRefs, useMergeValue } from "@flowagent-design/system"
 import { ClearIcon } from "@flowagent-design/icon"
-import { applyBoxStyle, deleteCssProps, getColor } from "@flowagent-design/theme"
+import {
+  applyBoxStyle,
+  deleteCssProps,
+  getColor,
+} from "@flowagent-design/theme"
 import autoSizeTextAreaHeight from "./autoSizeTextAreaHeight"
 import { useIsomorphicLayoutEffect } from "framer-motion"
 
