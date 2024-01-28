@@ -55,7 +55,8 @@ export default defineConfig({
           "@flowagent-design/link": "@flowagent-design/link",
           "@flowagent-design/system": "@flowagent-design/system",
           "@flowagent-design/theme": "@flowagent-design/theme",
-          "@flowagent-design/config-provider": "@flowagent-design/config-provider",
+          "@flowagent-design/config-provider":
+            "@flowagent-design/config-provider",
         },
       },
     },

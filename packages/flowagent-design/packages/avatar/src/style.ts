@@ -32,7 +32,9 @@ export function applyBgColor(colorScheme: AvatarColorScheme): SerializedStyles {
   if (colors.includes(colorScheme)) {
     if (colorScheme == "gray" || colorScheme == "grayBlue") {
       bgColor = css`
-        background-color: ${globalColor(`--${flowagentPrefix}-${colorScheme}-05`)};
+        background-color: ${globalColor(
+          `--${flowagentPrefix}-${colorScheme}-05`,
+        )};
       `
     } else {
       bgColor = css`

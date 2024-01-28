@@ -54,7 +54,8 @@ export default defineConfig({
           "@flowagent-design/system": "@flowagent-design/system",
           "@flowagent-design/theme": "@flowagent-design/theme",
           "@flowagent-design/trigger": "@flowagent-design/trigger",
-          "@flowagent-design/config-provider": "@flowagent-design/config-provider",
+          "@flowagent-design/config-provider":
+            "@flowagent-design/config-provider",
           "@flowagent-design/icon": "@flowagent-design/icon",
           "@flowagent-design/button": "@flowagent-design/button",
           "lodash.debounce": "@lodash/debounce",

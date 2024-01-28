@@ -61,7 +61,7 @@ export const authorTextCss = css`
   font-family: SFProDisplay;
   font-size: 14px;
   margin-right: 8px;
-  color: ${globalColor(`--${flowagentPrefix}-grayBlue-04`)}; ;
+  color: ${globalColor(`--${flowagentPrefix}-grayBlue-04`)};
 `
 
 export const dateTimeTextCss = css`

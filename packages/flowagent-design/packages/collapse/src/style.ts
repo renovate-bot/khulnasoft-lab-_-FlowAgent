@@ -84,7 +84,7 @@ export function applyPositionIconAnimateStyle(
 
 export function applyCollapseExtraStyle(showIcon: boolean): SerializedStyles {
   return css`
-    margin-right: ${showIcon ? "4px" : "0"}; ;
+    margin-right: ${showIcon ? "4px" : "0"};
   `
 }
 

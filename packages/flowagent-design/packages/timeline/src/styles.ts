@@ -71,7 +71,9 @@ export function applyItemStyle(
 }
 
 export function baseLineStyle(lineColor?: string): SerializedStyles {
-  let color = lineColor ? lineColor : globalColor(`--${flowagentPrefix}-grayBlue-08`)
+  let color = lineColor
+    ? lineColor
+    : globalColor(`--${flowagentPrefix}-grayBlue-08`)
   return css`
     border-color: ${color};
   `
