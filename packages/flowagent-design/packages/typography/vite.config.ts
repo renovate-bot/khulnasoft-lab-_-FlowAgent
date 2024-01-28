@@ -54,7 +54,8 @@ export default defineConfig({
           "@flowagent-design/theme": "@flowagent-design/theme",
           "@flowagent-design/icon": "@flowagent-design/icon",
           "@flowagent-design/trigger": "@flowagent-design/trigger",
-          "@flowagent-design/config-provider": "@flowagent-design/config-provider",
+          "@flowagent-design/config-provider":
+            "@flowagent-design/config-provider",
           "react-use-measure": "react-use-measure",
         },
       },

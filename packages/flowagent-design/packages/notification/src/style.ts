@@ -12,7 +12,8 @@ export function applyNotification(closable?: boolean): SerializedStyles {
     width: 320px;
     display: flex;
     box-sizing: border-box;
-    box-shadow: 0 4px 10px 0 ${globalColor(`--${flowagentPrefix}-blackAlpha-07`)};
+    box-shadow: 0 4px 10px 0
+      ${globalColor(`--${flowagentPrefix}-blackAlpha-07`)};
     border-radius: 8px;
     border: 1px solid ${globalColor(`--${flowagentPrefix}-grayBlue-08`)};
     background-color: ${globalColor(`--${flowagentPrefix}-white-01`)};

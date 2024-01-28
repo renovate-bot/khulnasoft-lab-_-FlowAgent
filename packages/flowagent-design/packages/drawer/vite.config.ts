@@ -56,7 +56,8 @@ export default defineConfig({
           "@flowagent-design/icon": "@flowagent-design/icon",
           "@flowagent-design/button": "@flowagent-design/button",
           "react-remove-scroll": "react-remove-scroll",
-          "@flowagent-design/config-provider": "@flowagent-design/config-provider",
+          "@flowagent-design/config-provider":
+            "@flowagent-design/config-provider",
           "react-focus-lock": "react-focus-lock",
         },
       },

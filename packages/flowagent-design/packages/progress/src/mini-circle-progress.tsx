@@ -8,7 +8,11 @@ import {
   applyCircleStatus,
   applyCircleSvgContainer,
 } from "./mini-circle-progress-style"
-import { applyBoxStyle, deleteCssProps, getColor } from "@flowagent-design/theme"
+import {
+  applyBoxStyle,
+  deleteCssProps,
+  getColor,
+} from "@flowagent-design/theme"
 
 export const MiniCircleProgress = forwardRef<HTMLDivElement, ProgressProps>(
   (props, ref) => {

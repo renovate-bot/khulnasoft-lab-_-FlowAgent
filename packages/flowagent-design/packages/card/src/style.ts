@@ -12,7 +12,9 @@ export function applyCard(
     : ``
 
   const boxShadow = hoverable
-    ? `box-shadow: 0 4px 10px 0 ${globalColor(`--${flowagentPrefix}-blackAlpha-07`)}`
+    ? `box-shadow: 0 4px 10px 0 ${globalColor(
+        `--${flowagentPrefix}-blackAlpha-07`,
+      )}`
     : ""
   return css`
     font-size: 14px;
@@ -28,7 +30,9 @@ export function applyCard(
 
 export function applyMetaContainer(hoverable?: boolean): SerializedStyles {
   const boxShadow = hoverable
-    ? `box-shadow: 0 4px 10px 0 ${globalColor(`--${flowagentPrefix}-blackAlpha-07`)}`
+    ? `box-shadow: 0 4px 10px 0 ${globalColor(
+        `--${flowagentPrefix}-blackAlpha-07`,
+      )}`
     : ""
   return css`
     display: flex;

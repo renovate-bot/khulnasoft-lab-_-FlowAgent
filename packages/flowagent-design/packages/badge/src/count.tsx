@@ -1,6 +1,10 @@
 import usePrevious from "./usePrevious"
 import { CountProps } from "./interface"
-import { deleteCssProps, globalColor, flowagentPrefix } from "@flowagent-design/theme"
+import {
+  deleteCssProps,
+  globalColor,
+  flowagentPrefix,
+} from "@flowagent-design/theme"
 import { applyBadgeNumberOrText, applyBadgeScale } from "./style"
 import { Key } from "react"
 

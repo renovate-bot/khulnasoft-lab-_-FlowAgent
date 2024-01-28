@@ -55,7 +55,8 @@ export default defineConfig({
           "@flowagent-design/trigger": "@flowagent-design/trigger",
           "@flowagent-design/typography": "@flowagent-design/typography",
           "@flowagent-design/button": "@flowagent-design/button",
-          "@flowagent-design/config-provider": "@flowagent-design/config-provider",
+          "@flowagent-design/config-provider":
+            "@flowagent-design/config-provider",
           "@flowagent-design/system": "@flowagent-design/system",
           "@flowagent-design/theme": "@flowagent-design/theme",
           "@flowagent-design/space": "@flowagent-design/space",

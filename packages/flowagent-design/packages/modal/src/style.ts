@@ -1,6 +1,11 @@
 import { ModalAlignType } from "./interface"
 import { css, SerializedStyles } from "@emotion/react"
-import { getColor, globalColor, flowagentPrefix, zIndex } from "@flowagent-design/theme"
+import {
+  getColor,
+  globalColor,
+  flowagentPrefix,
+  zIndex,
+} from "@flowagent-design/theme"
 import { Variants } from "framer-motion"
 
 export function applyModalMask(z?: string | number): SerializedStyles {
@@ -62,7 +67,8 @@ export function applyModalHeader(
   let border = css``
   if (!withoutLine) {
     border = css`
-      border-bottom: 1px solid ${globalColor(`--${flowagentPrefix}-grayBlue-08`)};
+      border-bottom: 1px solid
+        ${globalColor(`--${flowagentPrefix}-grayBlue-08`)};
     `
   }
 

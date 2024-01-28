@@ -25,7 +25,9 @@ export const Image = forwardRef<HTMLDivElement, ImageProps>((props, ref) => {
     // custom
     objectFit = "cover",
     fallback = (
-      <ImageDefaultIcon color={globalColor(`--${flowagentPrefix}-blackAlpha-06`)} />
+      <ImageDefaultIcon
+        color={globalColor(`--${flowagentPrefix}-blackAlpha-06`)}
+      />
     ),
     fallbackSrc = "",
     radius = "4px",

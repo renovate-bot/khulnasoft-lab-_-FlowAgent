@@ -127,7 +127,9 @@ export const FiltersEditor: FC<FiltersEditorProps> = (props) => {
           variant="text"
           onClick={onAdd}
           leftIcon={
-            <AddIcon color={globalColor(`--${flowagentPrefix}-techPurple-03`)} />
+            <AddIcon
+              color={globalColor(`--${flowagentPrefix}-techPurple-03`)}
+            />
           }
         >
           New

@@ -37,21 +37,18 @@ export const TableFilter: FC<TableFilterProps> = (props) => {
     })
   }
 
-  const removeFilters = useCallback(
-    (index: number, id: string) => {
-      setFilters((prev) => {
-        const filters = [...prev]
-        if (filters) {
-          filters.splice(index, 1)
-          if (filters.length == 0) {
-            filters.push({ id: "", value: "" })
-          }
+  const removeFilters = useCallback((index: number, id: string) => {
+    setFilters((prev) => {
+      const filters = [...prev]
+      if (filters) {
+        filters.splice(index, 1)
+        if (filters.length == 0) {
+          filters.push({ id: "", value: "" })
         }
-        return filters
-      })
-    },
-    [],
-  )
+      }
+      return filters
+    })
+  }, [])
 
   const onVisibleChange = useCallback(
     (visible: boolean) => {
