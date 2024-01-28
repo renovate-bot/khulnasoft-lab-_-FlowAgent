@@ -1,0 +1,9 @@
+{
+  "name": "@flowagent-public/flowagent-storage",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.ts",
+  "keywords": [],
+  "author": "flowagent",
+  "license": "Apache-2.0"
+}

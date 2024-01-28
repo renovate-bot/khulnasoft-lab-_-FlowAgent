@@ -1,0 +1,108 @@
+{
+  "name": "@flowagent-design/react",
+  "version": "1.1.0",
+  "description": "Illa Design React.",
+  "keywords": [
+    "ui",
+    "ui-components",
+    "react"
+  ],
+  "sideEffects": false,
+  "author": "IFLOWAGENT Cloud <opensource@flowagentsoft.com>",
+  "homepage": "https://github.com/khulnasoft-lab/flowagent-design",
+  "license": "Apache-2.0",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/umd/index.js",
+    "module": "dist/es/index.js",
+    "types": "dist/types/index.d.ts",
+    "typings": "dist/types/index.d.ts",
+    "exports": {
+      ".": {
+        "import": "./dist/es/index.js",
+        "require": "./dist/umd/index.js"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khulnasoft-lab/flowagent-design.git",
+    "directory": "packages/react"
+  },
+  "bugs": {
+    "url": "https://github.com/khulnasoft-lab/flowagent-design/issues"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@flowagent-design/system": "workspace:*",
+    "@flowagent-design/theme": "workspace:*",
+    "@flowagent-design/config-provider": "workspace:*",
+    "@flowagent-design/avatar": "workspace:*",
+    "@flowagent-design/breadcrumb": "workspace:*",
+    "@flowagent-design/icon": "workspace:*",
+    "@flowagent-design/image": "workspace:*",
+    "@flowagent-design/tag": "workspace:*",
+    "@flowagent-design/divider": "workspace:*",
+    "@flowagent-design/space": "workspace:*",
+    "@flowagent-design/button": "workspace:*",
+    "@flowagent-design/radio": "workspace:*",
+    "@flowagent-design/typography": "workspace:*",
+    "@flowagent-design/trigger": "workspace:*",
+    "@flowagent-design/popover": "workspace:*",
+    "@flowagent-design/checkbox": "workspace:*",
+    "@flowagent-design/list": "workspace:*",
+    "@flowagent-design/link": "workspace:*",
+    "@flowagent-design/progress": "workspace:*",
+    "@flowagent-design/empty": "workspace:*",
+    "@flowagent-design/badge": "workspace:*",
+    "@flowagent-design/statistic": "workspace:*",
+    "@flowagent-design/input": "workspace:*",
+    "@flowagent-design/input-tag": "workspace:*",
+    "@flowagent-design/input-number": "workspace:*",
+    "@flowagent-design/switch": "workspace:*",
+    "@flowagent-design/alert": "workspace:*",
+    "@flowagent-design/grid": "workspace:*",
+    "@flowagent-design/popconfirm": "workspace:*",
+    "@flowagent-design/pagination": "workspace:*",
+    "@flowagent-design/spin": "workspace:*",
+    "@flowagent-design/notification": "workspace:*",
+    "@flowagent-design/cascader": "workspace:*",
+    "@flowagent-design/message": "workspace:*",
+    "@flowagent-design/select": "workspace:*",
+    "@flowagent-design/comment": "workspace:*",
+    "@flowagent-design/description": "workspace:*",
+    "@flowagent-design/timeline": "workspace:*",
+    "@flowagent-design/card": "workspace:*",
+    "@flowagent-design/rate": "workspace:*",
+    "@flowagent-design/modal": "workspace:*",
+    "@flowagent-design/steps": "workspace:*",
+    "@flowagent-design/back-top": "workspace:*",
+    "@flowagent-design/drawer": "workspace:*",
+    "@flowagent-design/collapse": "workspace:*",
+    "@flowagent-design/result": "workspace:*",
+    "@flowagent-design/page-header": "workspace:*",
+    "@flowagent-design/menu": "workspace:*",
+    "@flowagent-design/loading": "workspace:*",
+    "@flowagent-design/tabs": "workspace:*",
+    "@flowagent-design/skeleton": "workspace:*",
+    "@flowagent-design/dropdown": "workspace:*",
+    "@flowagent-design/affix": "workspace:*",
+    "@flowagent-design/table": "workspace:*",
+    "@flowagent-design/calendar": "workspace:*",
+    "@flowagent-design/date-picker": "workspace:*",
+    "@flowagent-design/time-picker": "workspace:*",
+    "@flowagent-design/upload": "workspace:*",
+    "@flowagent-design/slider": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@emotion/react": "^11.11.1"
+  }
+}

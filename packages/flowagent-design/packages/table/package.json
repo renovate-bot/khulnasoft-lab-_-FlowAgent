@@ -1,0 +1,70 @@
+{
+  "name": "@flowagent-design/table",
+  "version": "1.1.0",
+  "description": "Illa Design Table.",
+  "keywords": [
+    "table",
+    "react",
+    "component"
+  ],
+  "sideEffects": false,
+  "author": "IFLOWAGENT Cloud <opensource@flowagentsoft.com>",
+  "homepage": "https://github.com/khulnasoft-lab/flowagent-design",
+  "license": "Apache-2.0",
+  "main": "src/index.ts",
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/umd/index.js",
+    "module": "dist/es/index.js",
+    "types": "dist/types/index.d.ts",
+    "typings": "dist/types/index.d.ts",
+    "exports": {
+      ".": {
+        "import": "./dist/es/index.js",
+        "require": "./dist/umd/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khulnasoft-lab/flowagent-design.git",
+    "directory": "packages/table"
+  },
+  "bugs": {
+    "url": "https://github.com/khulnasoft-lab/flowagent-design/issues"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@flowagent-design/button": "workspace:*",
+    "@flowagent-design/checkbox": "workspace:*",
+    "@flowagent-design/empty": "workspace:*",
+    "@flowagent-design/icon": "workspace:*",
+    "@flowagent-design/input": "workspace:*",
+    "@flowagent-design/pagination": "workspace:*",
+    "@flowagent-design/select": "workspace:*",
+    "@flowagent-design/spin": "workspace:*",
+    "@flowagent-design/system": "workspace:*",
+    "@flowagent-design/theme": "workspace:*",
+    "@flowagent-design/trigger": "workspace:*",
+    "@tanstack/match-sorter-utils": "^8.8.4",
+    "@tanstack/react-table": "^8.9.1",
+    "chroma-js": "^2.1.2",
+    "lodash.debounce": "^4.0.8",
+    "react-fast-compare": "^3.2.0",
+    "react-use": "^17.4.0"
+  },
+  "devDependencies": {
+    "@types/chroma-js": "^2.1.4",
+    "@types/lodash.debounce": "^4.0.7"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.11.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

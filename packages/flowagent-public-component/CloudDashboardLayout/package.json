@@ -1,0 +1,31 @@
+{
+  "name": "@flowagent-public/cloud-dashboard-layout",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.tsx",
+  "dependencies": {
+    "@flowagent-public/utils": "workspace:*",
+    "@flowagent-public/avatar": "workspace:*",
+    "@flowagent-public/user-data": "workspace:*",
+    "@flowagent-public/public-types": "workspace:*",
+    "@flowagent-public/user-role-utils": "workspace:*",
+    "@flowagent-public/invite-modal": "workspace:*",
+    "@flowagent-public/public-configs": "workspace:*",
+    "@flowagent-design/react": "workspace:*",
+    "@flowagent-public/mixpanel-utils": "workspace:*"
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@emotion/react": "^11.11.1",
+    "i18next": "^23.7.6",
+    "react-redux": "^9.0.4",
+    "react-i18next": "^13.5.0",
+    "react-router-dom": "^6.4.4"
+  }
+}

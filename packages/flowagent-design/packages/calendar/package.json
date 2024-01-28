@@ -1,0 +1,57 @@
+{
+  "name": "@flowagent-design/calendar",
+  "version": "1.1.0",
+  "description": "Illa Design Calendar.",
+  "keywords": [
+    "calendar",
+    "react",
+    "component"
+  ],
+  "sideEffects": false,
+  "author": "IFLOWAGENT Cloud <opensource@flowagentsoft.com>",
+  "homepage": "https://github.com/khulnasoft-lab/flowagent-design",
+  "license": "Apache-2.0",
+  "main": "src/index.ts",
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/umd/index.js",
+    "module": "dist/es/index.js",
+    "types": "dist/types/index.d.ts",
+    "typings": "dist/types/index.d.ts",
+    "exports": {
+      ".": {
+        "import": "./dist/es/index.js",
+        "require": "./dist/umd/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khulnasoft-lab/flowagent-design.git",
+    "directory": "packages/calendar"
+  },
+  "bugs": {
+    "url": "https://github.com/khulnasoft-lab/flowagent-design/issues"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@flowagent-design/system": "workspace:*",
+    "@flowagent-design/theme": "workspace:*",
+    "@flowagent-design/config-provider": "workspace:*",
+    "@flowagent-design/icon": "workspace:*",
+    "@flowagent-design/button": "workspace:*",
+    "@flowagent-design/radio": "workspace:*",
+    "@flowagent-design/select": "workspace:*",
+    "dayjs": "^1.11.7"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@emotion/react": "^11.11.1"
+  }
+}

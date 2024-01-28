@@ -1,0 +1,88 @@
+name: Deploy to k8s
+
+on:
+  push:
+    branches:
+      - main
+      - beta
+      - develop
+
+env:
+  FLOWAGENT_GOOGLE_MAP_KEY: ${{ secrets.FLOWAGENT_GOOGLE_MAP_KEY }}
+  FLOWAGENT_MIXPANEL_API_KEY: ${{ secrets.FLOWAGENT_MIXPANEL_API_KEY }}
+  FLOWAGENT_MUI_LICENSE: ${{ secrets.FLOWAGENT_MUI_LICENSE }}
+  FLOWAGENT_SENTRY_AUTH_TOKEN: ${{ secrets.FLOWAGENT_SENTRY_AUTH_TOKEN }}
+  DO_CLUSTER: ${{ secrets.DO_CLUSTER }}
+  DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+  DOCKER_PWD: ${{ secrets.DOCKER_PWD }}
+
+jobs:
+  build:
+    name: Build website
+    runs-on: ubuntu-latest
+    environment:
+      name:
+        ${{ (github.ref == 'refs/heads/main') && 'production' || (github.ref ==
+        'refs/heads/develop') && 'test' || (github.ref == 'refs/heads/beta') &&
+        'beta' }}
+    env:
+      FLOWAGENT_API_BASE_URL: ${{ vars.FLOWAGENT_API_BASE_URL }}
+      FLOWAGENT_APP_ENV: ${{ vars.FLOWAGENT_APP_ENV }}
+      FLOWAGENT_BUILDER_URL: ${{ vars.FLOWAGENT_BUILDER_URL }}
+      FLOWAGENT_CLOUD_URL: ${{ vars.FLOWAGENT_CLOUD_URL }}
+      FLOWAGENT_MARKET_URL: ${{ vars.FLOWAGENT_MARKET_URL }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.12.1
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.7.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DO_TOKEN }}
+
+      - name: Install kubectl
+        run: |
+          sudo snap install kubectl --classic
+
+      - name: Setup kubectl
+        run: |
+          doctl kubernetes cluster kubeconfig save $DO_CLUSTER
+          kubectl version
+
+      - name: Build website
+        run: |
+          echo "Building for $GITHUB_REF_NAME branch,FLOWAGENT APP ENV is $FLOWAGENT_APP_ENV"
+          pnpm build-cloud
+      - name: Build Docker
+        run: |
+          docker build --cache-from=flowagent-frontend -f Dockerfile -t flowagent-frontend .
+
+      - name: Push application Docker image
+        run: |
+          docker login -u $DOCKER_LOGIN -p $DOCKER_PWD
+          docker tag flowagent-frontend "flowagentsoft/flowagent-frontend:$GITHUB_REF_NAME"
+          docker push "flowagentsoft/flowagent-frontend:$GITHUB_REF_NAME"
+
+      - uses: actions/checkout@v4
+        with:
+          repository: khulnasoft-lab/k8s-application-do
+          token: ${{ secrets.FLOWAGENT_BOT_TOKEN }}
+          path: k8s-application-do
+
+      - name: Deploy to Kubernetes
+        run: |
+          cd k8s-application-do/namespace-$FLOWAGENT_APP_ENV
+          kubectl delete pod -n $FLOWAGENT_APP_ENV -l repo=flowagent-frontend
+          kubectl apply -f ./flowagent-frontend/ -n $FLOWAGENT_APP_ENV

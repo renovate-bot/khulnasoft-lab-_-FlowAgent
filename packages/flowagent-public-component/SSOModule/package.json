@@ -1,0 +1,30 @@
+{
+  "name": "@flowagent-public/sso-module",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.tsx",
+  "dependencies": {
+    "@flowagent-public/utils": "workspace:*",
+    "@flowagent-public/icon": "workspace:*",
+    "react-hook-form": "^7.30.0",
+    "@flowagent-public/mixpanel-utils": "workspace:*",
+    "@flowagent-public/layout-auto-change": "workspace:*",
+    "@flowagent-public/text-link": "workspace:*",
+    "@flowagent-public/flowagent-net": "workspace:*",
+    "@flowagent-public/public-configs": "workspace:*",
+    "@flowagent-design/react": "workspace:*",
+    "react-router-dom": "^6.14.0"
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@emotion/react": "^11.11.1",
+    "react-i18next": "^13.5.0",
+    "i18next": "^23.7.6"
+  }
+}

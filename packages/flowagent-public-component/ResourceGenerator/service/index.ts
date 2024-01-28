@@ -1,0 +1,66 @@
+import { actionRequest, agentRequest } from "@flowagent-public/flowagent-net"
+import { notNeedAuthRequest } from "@flowagent-public/flowagent-net"
+import { Agent, ResourceContent, ResourceType } from "@flowagent-public/public-types"
+
+export interface IActionTestConnectionRequestData {
+  resourceID: string
+  resourceName: string
+  resourceType: ResourceType
+  content: ResourceContent
+}
+
+export const fetchActionTestConnection = (
+  teamID: string,
+  data: IActionTestConnectionRequestData,
+) => {
+  return actionRequest<null>(
+    { url: "/resources/testConnection", method: "POST", data },
+    {
+      teamID,
+    },
+  )
+}
+
+interface IWhiteListIPResponse {
+  resources: string[]
+}
+
+export const fetchWhiteListIP = async () => {
+  return await notNeedAuthRequest<IWhiteListIPResponse>({
+    url: "https://peripheral-api.flowagentsoft.com/v1/meta",
+    method: "GET",
+  })
+}
+
+export const forkAIAgentToTeam = (teamID: string, aiAgentID: string) => {
+  return agentRequest<Agent>({
+    url: `/aiAgent/${aiAgentID}/forkTo/teams/${teamID}`,
+    method: "POST",
+  })
+}
+
+export interface TeamAgentListData {
+  aiAgentList: Agent[]
+  totalAIAgentCount: number
+  totalPages: number
+}
+
+export const fetchTeamAgentListByPage = (
+  teamID: string,
+  page: number,
+  keywords: string = "",
+  signal?: AbortSignal,
+) => {
+  return agentRequest<TeamAgentListData>(
+    {
+      url: keywords
+        ? `/aiAgent/list/limit/10/page/${page}/sortBy/id/like/keywords/${keywords}`
+        : `/aiAgent/list/limit/10/page/${page}/sortBy/id`,
+      method: "GET",
+      signal,
+    },
+    {
+      teamID: teamID,
+    },
+  )
+}

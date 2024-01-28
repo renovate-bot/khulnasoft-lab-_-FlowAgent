@@ -1,0 +1,13 @@
+{
+  "name": "@flowagent-public/flowagent-net",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.ts",
+  "dependencies": {
+    "@flowagent-public/utils": "workspace:*",
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:*"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@flowagent-public/member-page",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.tsx",
+  "dependencies": {
+    "@flowagent-public/utils": "workspace:*",
+    "@flowagent-public/user-role-utils": "workspace:*",
+    "@flowagent-public/layout-auto-change": "workspace:*",
+    "@flowagent-public/mixpanel-utils": "workspace:*",
+    "@flowagent-public/auth-shown": "workspace:*",
+    "@flowagent-public/icon": "workspace:*",
+    "@flowagent-public/role-selector": "workspace:*",
+    "@flowagent-public/usage-card": "workspace:*",
+    "@flowagent-public/avatar": "workspace:*",
+    "@flowagent-public/user-data": "workspace:*",
+    "@flowagent-public/flowagent-net": "workspace:*",
+    "@flowagent-public/invite-modal": "workspace:*",
+    "@flowagent-public/upgrade-modal": "workspace:*",
+    "react-hook-form": "^7.30.0",
+    "copy-to-clipboard": "^3.3.2",
+    "@flowagent-design/react": "workspace:*",
+    "@flowagent-public/public-types": "workspace:*"
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@emotion/react": "^11.11.1",
+    "react-i18next": "^13.5.0",
+    "i18next": "^23.7.6",
+    "react-redux": "^9.0.4"
+  }
+}
