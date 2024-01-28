@@ -1,0 +1,6 @@
+# snapchat
+__snapshots__/**
+*.test.tsx.snap
+FLOWAGENT_PROTO.*
+*.md
+*.mdx
