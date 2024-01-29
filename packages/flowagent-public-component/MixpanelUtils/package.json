@@ -4,7 +4,7 @@
   "private": true,
   "main": "index.tsx",
   "dependencies": {
-    "@fingerprintjs/fingerprintjs": "^3.4.0",
+    "@fingerprintjs/fingerprintjs": "^4.0.0",
     "@flowagent-public/flowagent-storage": "workspace:*",
     "@flowagent-public/utils": "workspace:*",
     "mixpanel-browser": "^2.47.0"

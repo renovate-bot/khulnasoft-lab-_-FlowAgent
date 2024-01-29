@@ -3469,8 +3469,8 @@ importers:
   packages/flowagent-public-component/MixpanelUtils:
     dependencies:
       '@fingerprintjs/fingerprintjs':
-        specifier: ^3.4.0
-        version: 3.4.2
+        specifier: ^4.0.0
+        version: 4.2.1
       '@flowagent-public/flowagent-storage':
         specifier: workspace:*
         version: link:../FLOWAGENTStorage
@@ -5628,8 +5628,8 @@ packages:
       lodash.uniq: 4.5.0
     dev: false
 
-  /@fingerprintjs/fingerprintjs@3.4.2:
-    resolution: {integrity: sha512-3Ncze6JsJpB7BpYhqIgvBpfvEX1jsEKrad5hQBpyRQxtoAp6hx3+R46zqfsuQG4D9egQZ+xftQ0u4LPFMB7Wmg==}
+  /@fingerprintjs/fingerprintjs@4.2.1:
+    resolution: {integrity: sha512-uW+GVUNTgCXbVPEbgnbf5Aor22e1dyYR0JRwdUiZBaikfxr7KlhV9y0aahA1FB99fEeQVvhCEvTcPIFSYTy9Pw==}
     dependencies:
       tslib: 2.6.2
     dev: false
@@ -9399,7 +9399,7 @@ packages:
     resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
     dependencies:
       no-case: 3.0.4
-      tslib: 2.5.0
+      tslib: 2.6.2
     dev: true
 
   /dot-prop@5.3.0:
@@ -15451,7 +15451,7 @@ packages:
     resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.5.0
+      tslib: 2.6.2
     dev: true
 
   /source-map-js@1.0.2:
@@ -16035,6 +16035,7 @@ packages:
 
   /tslib@2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
+    dev: false
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
