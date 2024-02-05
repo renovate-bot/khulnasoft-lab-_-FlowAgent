@@ -84,7 +84,7 @@
     "@tanstack/react-table": "^8.9.1",
     "@tanstack/table-core": "^8.9.1",
     "@uiw/codemirror-theme-github": "^4.19.8",
-    "@uiw/color-convert": "^1.4.2",
+    "@uiw/color-convert": "^2.0.0",
     "@uiw/react-codemirror": "^4.20.2",
     "@uiw/react-color-sketch": "^1.4.2",
     "axios": "^1.6.2",

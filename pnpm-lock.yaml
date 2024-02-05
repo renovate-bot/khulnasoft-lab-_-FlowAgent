@@ -289,8 +289,8 @@ importers:
         specifier: ^4.19.8
         version: 4.21.21(@codemirror/language@6.10.0)(@codemirror/state@6.4.0)(@codemirror/view@6.23.1)
       '@uiw/color-convert':
-        specifier: ^1.4.2
-        version: 1.4.3(@babel/runtime@7.23.9)
+        specifier: ^2.0.0
+        version: 2.0.6(@babel/runtime@7.23.9)
       '@uiw/react-codemirror':
         specifier: ^4.20.2
         version: 4.21.21(@babel/runtime@7.23.9)(@codemirror/autocomplete@6.12.0)(@codemirror/language@6.10.0)(@codemirror/lint@6.4.2)(@codemirror/search@6.5.5)(@codemirror/state@6.4.0)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.23.1)(codemirror@6.0.1)(react-dom@18.2.0)(react@18.2.0)
@@ -7713,6 +7713,14 @@ packages:
 
   /@uiw/color-convert@1.4.3(@babel/runtime@7.23.9):
     resolution: {integrity: sha512-i0E3P4KctYAynAKiVCUAYPQSikzJSaEXyIF/E0+RVlLKzCfQzzWi/RT2+yRdJ4HEVxr1iZNH6sgI9OrTo0/7gA==}
+    peerDependencies:
+      '@babel/runtime': '>=7.19.0'
+    dependencies:
+      '@babel/runtime': 7.23.9
+    dev: false
+
+  /@uiw/color-convert@2.0.6(@babel/runtime@7.23.9):
+    resolution: {integrity: sha512-LDu9r8geEjUgGzsuTkUu6rV5SCqR9r2liVYQxH42tZ5NkFx87Oswz/lpwthCoulhgjSWA+QEjjE3XB8Z9ove1g==}
     peerDependencies:
       '@babel/runtime': '>=7.19.0'
     dependencies:
