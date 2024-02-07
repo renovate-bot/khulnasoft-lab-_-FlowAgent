@@ -2,8 +2,8 @@ import { isCloudVersion } from "./typeHelper"
 
 export const initDateReport = () => {
   if (
-    process.env.IFLOWAGENT_APP_ENV &&
-    process.env.IFLOWAGENT_APP_ENV === "production" &&
+    process.env.FLOWAGENT_APP_ENV &&
+    process.env.FLOWAGENT_APP_ENV === "production" &&
     isCloudVersion
   ) {
     const gaScript = document.createElement("script")

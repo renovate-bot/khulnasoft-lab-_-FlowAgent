@@ -1,6 +1,6 @@
-import { IFLOWAGENTFileInfo } from "@/services/drive"
+import { FLOWAGENTFileInfo } from "@/services/drive"
 
 export interface FolderListProps {
-  listData: IFLOWAGENTFileInfo[]
+  listData: FLOWAGENTFileInfo[]
   updateListData: (page: number, path: string) => void
 }

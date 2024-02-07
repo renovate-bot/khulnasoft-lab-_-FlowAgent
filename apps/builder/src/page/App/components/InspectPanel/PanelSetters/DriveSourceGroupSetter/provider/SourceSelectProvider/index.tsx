@@ -6,7 +6,7 @@ import {
   DRIVE_FILE_TYPE,
   EXPIRATION_TYPE,
   FILE_CATEGORY,
-  IFLOWAGENTFileInfo,
+  FLOWAGENTFileInfo,
 } from "@flowagent-public/public-types"
 import {
   CollarModalType,
@@ -33,7 +33,7 @@ interface Props {
 export const SourceSelectProvider: FC<Props> = (props) => {
   const { path = ROOT_PATH, children, widgetType, handleUpdateResult } = props
   const { currentPath, updatePath, totalPath } = usePath(path)
-  const [fileList, setFileList] = useState<IFLOWAGENTFileInfo[]>([])
+  const [fileList, setFileList] = useState<FLOWAGENTFileInfo[]>([])
   const [modalVisible, setModalVisible] = useState(false)
 
   const fileCategory = useMemo(() => {

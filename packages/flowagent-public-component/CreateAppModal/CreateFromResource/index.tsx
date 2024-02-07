@@ -1,6 +1,6 @@
 import { getIconFromResourceType } from "@flowagent-public/icon"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { Resource } from "@flowagent-public/public-types"
@@ -174,7 +174,7 @@ export const CreateFromResourceModal: FC<CreateWithResourceProps> = ({
     if (!selectResourceID || !selectResource?.resourceType) return
     setCreateLoading(true)
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "create_from_db_modal_create",
         parameter5: selectResource?.resourceType,
@@ -221,7 +221,7 @@ export const CreateFromResourceModal: FC<CreateWithResourceProps> = ({
   }
   const handleResourceSelectClick = () => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "create_from_db_modal_table",
         parameter5: selectResource?.resourceType,
@@ -242,7 +242,7 @@ export const CreateFromResourceModal: FC<CreateWithResourceProps> = ({
   useEffect(() => {
     showResourceGenerate &&
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "create_from_db_modal",
         },

@@ -1,29 +1,29 @@
 import { FC, ReactNode, createContext, useCallback, useMemo } from "react"
 import {
-  IFLOWAGENTProperties,
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
-  IFLOWAGENT_PAGE_NAME,
+  FLOWAGENTProperties,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_PAGE_NAME,
 } from "./interface"
 
 interface IInject {
   track: (
-    event: IFLOWAGENT_MIXPANEL_EVENT_TYPE,
-    properties: Omit<IFLOWAGENTProperties, "page">,
+    event: FLOWAGENT_MIXPANEL_EVENT_TYPE,
+    properties: Omit<FLOWAGENTProperties, "page">,
     extendProperty?: "userRole" | "team_id" | "both",
   ) => void
-  pageName: IFLOWAGENT_PAGE_NAME
+  pageName: FLOWAGENT_PAGE_NAME
 }
 
 export const MixpanelTrackContext = createContext<IInject>({} as IInject)
 
 interface MixpanelTrackProviderProps {
   basicTrack: (
-    event: IFLOWAGENT_MIXPANEL_EVENT_TYPE,
-    pageName: IFLOWAGENT_PAGE_NAME,
-    properties: Omit<IFLOWAGENTProperties, "page">,
+    event: FLOWAGENT_MIXPANEL_EVENT_TYPE,
+    pageName: FLOWAGENT_PAGE_NAME,
+    properties: Omit<FLOWAGENTProperties, "page">,
     extendProperty?: "userRole" | "team_id" | "both",
   ) => void
-  pageName: IFLOWAGENT_PAGE_NAME
+  pageName: FLOWAGENT_PAGE_NAME
   children: ReactNode
 }
 
@@ -34,8 +34,8 @@ export const MixpanelTrackProvider: FC<MixpanelTrackProviderProps> = (
 
   const track = useCallback(
     (
-      event: IFLOWAGENT_MIXPANEL_EVENT_TYPE,
-      properties: Omit<IFLOWAGENTProperties, "page">,
+      event: FLOWAGENT_MIXPANEL_EVENT_TYPE,
+      properties: Omit<FLOWAGENTProperties, "page">,
       extendProperty?: "userRole" | "team_id" | "both",
     ) => {
       basicTrack(event, pageName, properties, extendProperty)

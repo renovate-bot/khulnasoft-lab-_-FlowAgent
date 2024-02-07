@@ -1,7 +1,7 @@
 import { SerializedStyles } from "@emotion/react"
 import { GCS_OBJECT_TYPE } from "@flowagent-public/public-types"
 import {
-  IFLOWAGENT_DRIVE_OBJECT_TYPE,
+  FLOWAGENT_DRIVE_OBJECT_TYPE,
   getFileTypeByContentType,
 } from "@flowagent-public/utils"
 import { ReactNode } from "react"
@@ -17,30 +17,30 @@ import {
 } from "@flowagent-design/react"
 import { AnonymousIcon, FolderIcon, ZipIcon } from "."
 
-export const getFileIconByIFLOWAGENTFileType = (
-  type: IFLOWAGENT_DRIVE_OBJECT_TYPE,
+export const getFileIconByFLOWAGENTFileType = (
+  type: FLOWAGENT_DRIVE_OBJECT_TYPE,
   iconStyle?: SerializedStyles,
 ) => {
   switch (type) {
-    case IFLOWAGENT_DRIVE_OBJECT_TYPE.IMAGE:
+    case FLOWAGENT_DRIVE_OBJECT_TYPE.IMAGE:
       return <FilePictureIcon css={iconStyle} />
-    case IFLOWAGENT_DRIVE_OBJECT_TYPE.VIDEO:
+    case FLOWAGENT_DRIVE_OBJECT_TYPE.VIDEO:
       return <FileVideoIcon css={iconStyle} />
-    case IFLOWAGENT_DRIVE_OBJECT_TYPE.AUDIO:
+    case FLOWAGENT_DRIVE_OBJECT_TYPE.AUDIO:
       return <FileMusicIcon css={iconStyle} />
-    case IFLOWAGENT_DRIVE_OBJECT_TYPE.PDF:
+    case FLOWAGENT_DRIVE_OBJECT_TYPE.PDF:
       return <FilePdfIcon css={iconStyle} />
-    case IFLOWAGENT_DRIVE_OBJECT_TYPE.WORD:
+    case FLOWAGENT_DRIVE_OBJECT_TYPE.WORD:
       return <FileWordIcon css={iconStyle} />
-    case IFLOWAGENT_DRIVE_OBJECT_TYPE.EXCEL:
+    case FLOWAGENT_DRIVE_OBJECT_TYPE.EXCEL:
       return <FileExcelIcon css={iconStyle} />
-    case IFLOWAGENT_DRIVE_OBJECT_TYPE.PPT:
+    case FLOWAGENT_DRIVE_OBJECT_TYPE.PPT:
       return <FilePPTIcon css={iconStyle} />
-    case IFLOWAGENT_DRIVE_OBJECT_TYPE.FOLDER:
+    case FLOWAGENT_DRIVE_OBJECT_TYPE.FOLDER:
       return <FolderIcon css={iconStyle} />
-    case IFLOWAGENT_DRIVE_OBJECT_TYPE.ZIP:
+    case FLOWAGENT_DRIVE_OBJECT_TYPE.ZIP:
       return <ZipIcon css={iconStyle} />
-    case IFLOWAGENT_DRIVE_OBJECT_TYPE.ANONYMOUS_FOLDER:
+    case FLOWAGENT_DRIVE_OBJECT_TYPE.ANONYMOUS_FOLDER:
       return <AnonymousIcon css={iconStyle} />
     default:
       return <FileDefaultIcon css={iconStyle} />
@@ -53,5 +53,5 @@ export const getFileIconByContentType = (
   iconStyle?: SerializedStyles,
 ): ReactNode => {
   const flowagentFileType = getFileTypeByContentType(type, contentType)
-  return getFileIconByIFLOWAGENTFileType(flowagentFileType, iconStyle)
+  return getFileIconByFLOWAGENTFileType(flowagentFileType, iconStyle)
 }

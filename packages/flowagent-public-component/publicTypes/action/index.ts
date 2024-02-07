@@ -13,9 +13,9 @@ import {
 import { GraphQLAction } from "./graphqlAction"
 import { HuggingFaceAction, HuggingFaceBodyContent } from "./huggingFaceAction"
 import {
-  IFLOWAGENTDriveAction,
-  IFLOWAGENTDriveActionTypeContent,
-  IFLOWAGENTDriveUpdateStatusAction,
+  FLOWAGENTDriveAction,
+  FLOWAGENTDriveActionTypeContent,
+  FLOWAGENTDriveUpdateStatusAction,
 } from "./flowagentDriveAction"
 import {
   MicrosoftSqlAction,
@@ -137,8 +137,8 @@ export type ActionContent =
   | AirtableAction<AirtableActionConfigType>
   | BaseAiAgentActionContent
   | GlobalDataActionContent
-  | IFLOWAGENTDriveAction<IFLOWAGENTDriveActionTypeContent>
-  | IFLOWAGENTDriveUpdateStatusAction
+  | FLOWAGENTDriveAction<FLOWAGENTDriveActionTypeContent>
+  | FLOWAGENTDriveUpdateStatusAction
 
 export * from "./aiAgentAction"
 export * from "./airtableAction"

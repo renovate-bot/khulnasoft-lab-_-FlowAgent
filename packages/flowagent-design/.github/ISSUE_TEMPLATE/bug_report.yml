@@ -47,8 +47,8 @@ body:
   - type: "input"
     id: "flowagent-design-version"
     attributes:
-      label: "IFLOWAGENT Design Version"
-      description: "The version of IFLOWAGENT Design you use."
+      label: "FLOWAGENT Design Version"
+      description: "The version of FLOWAGENT Design you use."
       placeholder: "1.6.4"
     validations:
       required: true

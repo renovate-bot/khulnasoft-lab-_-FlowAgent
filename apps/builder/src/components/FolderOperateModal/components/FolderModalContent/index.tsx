@@ -1,6 +1,6 @@
 import {
   DRIVE_FILE_TYPE,
-  IFLOWAGENTFileInfo,
+  FLOWAGENTFileInfo,
   SORTED_TYPE,
 } from "@flowagent-public/public-types"
 import {
@@ -52,7 +52,7 @@ const FolderModalContent: FC = () => {
     operateChildren,
   } = useContext(FolderOperateModalContext)
   const { t } = useTranslation()
-  const [folderList, setFolderList] = useState<IFLOWAGENTFileInfo[]>([])
+  const [folderList, setFolderList] = useState<FLOWAGENTFileInfo[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const totalRef = useRef<number>(0)

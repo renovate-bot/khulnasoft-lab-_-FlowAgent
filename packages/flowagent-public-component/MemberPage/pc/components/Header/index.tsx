@@ -1,6 +1,6 @@
 import { InviteMemberPC } from "@flowagent-public/invite-modal"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { MemberInfo, USER_ROLE, USER_STATUS } from "@flowagent-public/public-types"
@@ -45,7 +45,7 @@ export const Header: FC<IPcHeaderProps> = (props) => {
 
   const handleClickInviteButton = useCallback(() => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "invite_entry",
       },
@@ -91,7 +91,7 @@ export const Header: FC<IPcHeaderProps> = (props) => {
   useEffect(() => {
     showInviteButton &&
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "invite_entry",
         },

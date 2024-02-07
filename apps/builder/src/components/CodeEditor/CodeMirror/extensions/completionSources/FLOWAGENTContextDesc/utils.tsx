@@ -1,9 +1,9 @@
-interface IFLOWAGENTUtilsDesc {
+interface FLOWAGENTUtilsDesc {
   desc?: string
   usage: string
 }
 
-export const FLOWAGENT_UTILS_DESC: Record<string, IFLOWAGENTUtilsDesc> = {
+export const FLOWAGENT_UTILS_DESC: Record<string, FLOWAGENTUtilsDesc> = {
   goToURL: {
     desc: "",
     usage: "utils.goToURL({url:string,newTab?:boolean = false})",

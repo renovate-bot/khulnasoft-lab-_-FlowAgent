@@ -1,6 +1,6 @@
 import { ShareAppPC } from "@flowagent-public/invite-modal"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
   MixpanelTrackProvider,
 } from "@flowagent-public/mixpanel-utils"
@@ -22,7 +22,7 @@ import {
   showShareAppModal,
 } from "@flowagent-public/user-role-utils"
 import {
-  getIFLOWAGENTBuilderURL,
+  getFLOWAGENTBuilderURL,
   getMarketLinkTemplate,
   isCloudVersion,
 } from "@flowagent-public/utils"
@@ -97,7 +97,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
 
   const handleDuplicateApp = async () => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "app_duplicate",
         parameter5: appID,
@@ -114,7 +114,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
   const handleOpenAppSettingModal = () => {
     setAppSettingVisible(true)
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
       {
         element: "app_setting_modal",
         parameter5: appID,
@@ -125,7 +125,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
 
   const handleOpenInviteModal = useCallback(() => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "invite_entry",
         parameter5: appID,
@@ -158,7 +158,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
 
   const handleDeleteApp = useCallback(() => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "app_delete",
         parameter5: appID,
@@ -166,7 +166,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
       "both",
     )
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "app_delete_modal",
         parameter5: appID,
@@ -186,7 +186,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
       maskClosable: false,
       onOk: () => {
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "app_delete_modal_delete",
             parameter5: appID,
@@ -210,7 +210,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
       },
       onCancel: () => {
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "app_delete_modal_close",
             parameter5: appID,
@@ -225,23 +225,23 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
     (visible: boolean) => {
       if (visible) {
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
           { element: "app_more", parameter5: appID },
           "both",
         )
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
           { element: "app_duplicate", parameter5: appID },
           "both",
         )
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
           { element: "app_delete", parameter5: appID },
           "both",
         )
         canShowShareButton &&
           track?.(
-            IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+            FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
             { element: "invite_entry", parameter5: appID },
             "both",
           )
@@ -254,12 +254,12 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
     (visible: boolean) => {
       if (visible) {
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
           { element: "app_more", parameter5: appID },
           "both",
         )
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
           { element: "invite_entry", parameter5: appID },
           "both",
         )
@@ -271,7 +271,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
   useEffect(() => {
     if (canEditApp || (appDeployed && showInvite)) {
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         { element: "app_more", parameter5: appID },
         "both",
       )
@@ -279,13 +279,13 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
   }, [canEditApp, appDeployed, showInvite, appID, track])
 
   useEffect(() => {
-    track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW, { element: "app" }, "both")
+    track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW, { element: "app" }, "both")
   }, [track])
 
   useEffect(() => {
     shareVisible &&
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "invite_modal",
           parameter5: appID,
@@ -297,7 +297,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
   useEffect(() => {
     appSettingVisible &&
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         { element: "app_setting_modal", parameter5: appID },
         "both",
       )
@@ -444,10 +444,10 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
             title={t("user_management.modal.social_media.default_text.app", {
               appName: appName,
             })}
-            editRedirectURL={`${getIFLOWAGENTBuilderURL()}/${
+            editRedirectURL={`${getFLOWAGENTBuilderURL()}/${
               teamInfo.identifier
             }/app/${appID}`}
-            useRedirectURL={`${getIFLOWAGENTBuilderURL()}/${
+            useRedirectURL={`${getFLOWAGENTBuilderURL()}/${
               teamInfo.identifier
             }/deploy/app/${appID}`}
             defaultAllowInviteLink={teamInfo.permission.inviteLinkEnabled}
@@ -513,7 +513,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
             }}
             onCopyContributeLink={(link) => {
               track?.(
-                IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+                FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
                 {
                   element: "invite_modal_public_copy",
                   parameter5: appID,
@@ -549,7 +549,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
             onShare={(name) => {
               const { publishedToMarketplace } = appConfig
               track?.(
-                IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+                FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
                 {
                   element: "share_modal_social_media",
                   parameter1: publishedToMarketplace,
@@ -573,7 +573,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
             }}
             onSaveEvent={() => {
               track?.(
-                IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+                FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
                 {
                   element: "app_setting_modal_save",
                   parameter5: appID,
@@ -583,7 +583,7 @@ export const AppCardActionItem: FC<AppCardActionItemProps> = (props) => {
             }}
             onCloseEvent={() => {
               track?.(
-                IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+                FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
                 {
                   element: "app_setting_modal_close",
                   parameter5: appID,

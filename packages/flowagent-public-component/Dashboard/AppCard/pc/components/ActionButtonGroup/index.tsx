@@ -1,8 +1,8 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
-import { getAuthToken, getIFLOWAGENTBuilderURL } from "@flowagent-public/utils"
+import { getAuthToken, getFLOWAGENTBuilderURL } from "@flowagent-public/utils"
 import { FC, MouseEvent, useContext, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
@@ -20,7 +20,7 @@ export const ActionButtonGroup: FC<ActionButtonGroupProps> = (props) => {
     () => (e: MouseEvent) => {
       e.stopPropagation()
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
         {
           element: "app_launch",
           parameter5: appID,
@@ -28,7 +28,7 @@ export const ActionButtonGroup: FC<ActionButtonGroupProps> = (props) => {
         "both",
       )
       window.open(
-        `${getIFLOWAGENTBuilderURL()}/${teamIdentifier}/deploy/app/${appID}?token=${getAuthToken()}`,
+        `${getFLOWAGENTBuilderURL()}/${teamIdentifier}/deploy/app/${appID}?token=${getAuthToken()}`,
         "_blank",
       )
     },
@@ -39,7 +39,7 @@ export const ActionButtonGroup: FC<ActionButtonGroupProps> = (props) => {
     () => (e: MouseEvent) => {
       e.stopPropagation()
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
         {
           element: "app_edit",
           parameter5: appID,
@@ -47,7 +47,7 @@ export const ActionButtonGroup: FC<ActionButtonGroupProps> = (props) => {
         "both",
       )
       window.open(
-        `${getIFLOWAGENTBuilderURL()}/${teamIdentifier}/app/${appID}?token=${getAuthToken()}`,
+        `${getFLOWAGENTBuilderURL()}/${teamIdentifier}/app/${appID}?token=${getAuthToken()}`,
         "_blank",
       )
     },

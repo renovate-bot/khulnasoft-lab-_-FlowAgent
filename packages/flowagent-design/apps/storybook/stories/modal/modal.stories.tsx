@@ -64,7 +64,7 @@ const Template: StoryFn<ModalProps> = (args) => {
           onCancel={() => setVisible(false)}
           onOk={onOk}
         >
-          IFLOWAGENT very good!
+          FLOWAGENT very good!
         </Modal>
         <Space size={"large"} direction={"vertical"}>
           <Button

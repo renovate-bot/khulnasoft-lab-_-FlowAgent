@@ -1,6 +1,6 @@
 import { css } from "@emotion/react"
 
-export const IFLOWAGENTCodeMirrorWrapperStyle = css`
+export const FLOWAGENTCodeMirrorWrapperStyle = css`
   width: 100%;
   height: 100%;
   position: relative;

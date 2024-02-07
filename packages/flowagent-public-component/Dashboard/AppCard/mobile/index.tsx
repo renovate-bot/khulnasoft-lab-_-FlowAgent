@@ -1,5 +1,5 @@
 import { Avatar } from "@flowagent-public/avatar"
-import { fromNow, getAuthToken, getIFLOWAGENTBuilderURL } from "@flowagent-public/utils"
+import { fromNow, getAuthToken, getFLOWAGENTBuilderURL } from "@flowagent-public/utils"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { Link, useParams } from "react-router-dom"
@@ -78,7 +78,7 @@ export const MobileAppCardItem: FC<MobileCardItemProps> = (props) => {
         </div>
         {showLaunchButton && (
           <Link
-            to={`${getIFLOWAGENTBuilderURL()}/${teamIdentifier}/deploy/app/${appID}?token=${getAuthToken()}`}
+            to={`${getFLOWAGENTBuilderURL()}/${teamIdentifier}/deploy/app/${appID}?token=${getAuthToken()}`}
             target="_blank"
             css={linkButtonStyle}
           >

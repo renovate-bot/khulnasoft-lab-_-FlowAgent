@@ -1,7 +1,7 @@
-// import { isIFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
+// import { isFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
 // import {
-//   IFLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME,
-//   IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+//   FLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME,
+//   FLOWAGENT_MIXPANEL_EVENT_TYPE,
 // } from "@flowagent-public/mixpanel-utils"
 import { useUpgradeModal } from "@flowagent-public/upgrade-modal"
 import { UpgradeTag } from "@flowagent-public/upgrade-tag"

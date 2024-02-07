@@ -1,4 +1,4 @@
-export const isCloudVersion = process.env.IFLOWAGENT_INSTANCE_ID === "CLOUD"
+export const isCloudVersion = process.env.FLOWAGENT_INSTANCE_ID === "CLOUD"
 
 export function isURL(str: string) {
   const pattern = new RegExp(

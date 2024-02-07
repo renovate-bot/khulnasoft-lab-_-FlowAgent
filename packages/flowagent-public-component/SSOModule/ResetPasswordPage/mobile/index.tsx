@@ -1,7 +1,7 @@
 import {
-  IFLOWAGENTMixpanel,
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
-  IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME,
+  FLOWAGENTMixpanel,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME,
 } from "@flowagent-public/mixpanel-utils"
 import { FC, useEffect, useState } from "react"
 import { Controller, useFormContext } from "react-hook-form"
@@ -57,14 +57,14 @@ export const MobileReset: FC<ResetProps> = (props) => {
   >()
 
   const validReport = async () => {
-    IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
-      page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+    FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+      page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
       element: "reset_password",
     })
     let isValid = await trigger()
     if (isValid) {
       validateReport(
-        IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+        FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
         "reset_password",
         true,
         {},
@@ -76,7 +76,7 @@ export const MobileReset: FC<ResetProps> = (props) => {
   useEffect(() => {
     if (asyncValid && !asyncValid.isValid) {
       validateReport(
-        IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+        FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
         "reset_password",
         false,
         errors,
@@ -117,16 +117,16 @@ export const MobileReset: FC<ResetProps> = (props) => {
               placeholder={t("page.user.forgot_password.fields.email")}
               {...(lockedEmail && { value: lockedEmail, disabled: true })}
               onFocus={() => {
-                IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
-                  page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+                FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
+                  page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
 
                   element: "username_input",
                   parameter3: getValues().email?.length ?? 0,
                 })
               }}
               onBlur={() => {
-                IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
-                  page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+                FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
+                  page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
                   element: "username_input",
                   parameter3: getValues().email?.length ?? 0,
                 })
@@ -176,16 +176,16 @@ export const MobileReset: FC<ResetProps> = (props) => {
                 />
               }
               onFocus={() => {
-                IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
-                  page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+                FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
+                  page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
 
                   element: "verification_code_input",
                   parameter3: getValues().verificationCode?.length ?? 0,
                 })
               }}
               onBlur={() => {
-                IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
-                  page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+                FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
+                  page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
 
                   element: "verification_code_input",
                   parameter3: getValues().verificationCode?.length ?? 0,
@@ -224,16 +224,16 @@ export const MobileReset: FC<ResetProps> = (props) => {
               variant="fill"
               placeholder={t("page.user.forgot_password.fields.newPassword")}
               onFocus={() => {
-                IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
-                  page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+                FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
+                  page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
 
                   element: "password_input",
                   parameter3: getValues().newPassword?.length ?? 0,
                 })
               }}
               onBlur={() => {
-                IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
-                  page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+                FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
+                  page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
 
                   element: "password_input",
                   parameter3: getValues().newPassword?.length ?? 0,

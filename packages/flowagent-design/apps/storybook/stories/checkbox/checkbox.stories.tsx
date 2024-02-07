@@ -8,5 +8,5 @@ export default {
 } as Meta
 
 export const Basic: StoryFn<CheckboxProps> = (args) => {
-  return <Checkbox {...args}>IFLOWAGENT</Checkbox>
+  return <Checkbox {...args}>FLOWAGENT</Checkbox>
 }

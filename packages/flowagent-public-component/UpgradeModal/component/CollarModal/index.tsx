@@ -1,5 +1,5 @@
 import { UpgradeIcon } from "@flowagent-public/icon"
-import { IFLOWAGENT_MIXPANEL_EVENT_TYPE } from "@flowagent-public/mixpanel-utils"
+import { FLOWAGENT_MIXPANEL_EVENT_TYPE } from "@flowagent-public/mixpanel-utils"
 import { SUBSCRIPTION_CYCLE, USER_ROLE } from "@flowagent-public/public-types"
 import { getCurrentTeamInfo, getCurrentUserID } from "@flowagent-public/user-data"
 import { FC, useEffect } from "react"
@@ -57,7 +57,7 @@ export const CollarModal: FC<CollarModalProps> = (props) => {
       visible &&
       from &&
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         { element: reportElement, parameter1: from },
         USER_ROLE[teamInfo?.myRole],
         teamInfo?.id,

@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { USER_ROLE } from "@flowagent-public/public-types"
@@ -71,7 +71,7 @@ export const ShareAgentPC: FC<ShareAgentProps> = (props) => {
           colorScheme="grayBlue"
           withoutBorderLine
           onChange={(activeKey) => {
-            track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+            track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
               element: "share_modal_tab",
               parameter2: activeKey,
               parameter5: props.agentID,

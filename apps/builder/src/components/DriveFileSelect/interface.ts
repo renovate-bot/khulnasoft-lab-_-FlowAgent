@@ -1,6 +1,6 @@
-import { IFLOWAGENTFileInfo } from "@/services/drive"
+import { FLOWAGENTFileInfo } from "@/services/drive"
 
 export type FileToPanel = Pick<
-  IFLOWAGENTFileInfo,
+  FLOWAGENTFileInfo,
   "id" | "lastModifiedAt" | "name" | "size" | "type"
 >

@@ -1,9 +1,9 @@
 
 <div align="center">
-    <img alt="IFLOWAGENT Design Logo" width="120px" height="120px" src="./.github/assets/images/logo.svg"/>
+    <img alt="FLOWAGENT Design Logo" width="120px" height="120px" src="./.github/assets/images/logo.svg"/>
 </div>
 
-<h1 align="center">IFLOWAGENT Design</h1>
+<h1 align="center">FLOWAGENT Design</h1>
 
 <p align="center">Accelerate your internal tools development.</p>
 
@@ -38,7 +38,7 @@ You can review all components in Storybook.
 
 ## 🖥 Fast Try
 
-You can quickly use IFLOWAGENT Design on codesandbox.
+You can quickly use FLOWAGENT Design on codesandbox.
 
 [![Edit flowagent-design-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/flowagent-design-demo-r1qyy2?fontsize=14&hidenavigation=1&theme=dark)
 
@@ -61,7 +61,7 @@ import { Tag } from '@flowagent-design/react';
 
 const App = () => (
   <div>
-    <Tag>Hello IFLOWAGENT</Tag>
+    <Tag>Hello FLOWAGENT</Tag>
   </div>
 );
 ```
@@ -86,7 +86,7 @@ Then your can open storybook in your browser.
 
 ## 💬 Community
 
-Join IFLOWAGENT Community to share your ideas, suggestions or questions and connect with other users and contributors.
+Join FLOWAGENT Community to share your ideas, suggestions or questions and connect with other users and contributors.
 
 <b>Discussion</b>
 
@@ -98,7 +98,7 @@ Join IFLOWAGENT Community to share your ideas, suggestions or questions and conn
 
 ## 🌱 Contributing
 
-Thinking about contributing? All kinds of contributions to IFLOWAGENT are greatly appreciated and welcomed! Check
+Thinking about contributing? All kinds of contributions to FLOWAGENT are greatly appreciated and welcomed! Check
 out [Contributing Guide](./CONTRIBUTING.md) for details about how you can get involved.
 
 ## 🔥 We're Hiring

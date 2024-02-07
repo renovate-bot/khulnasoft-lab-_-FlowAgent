@@ -1,4 +1,4 @@
-import { ERROR_FLAG, isIFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
+import { ERROR_FLAG, isFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
 import { USER_ROLE } from "@flowagent-public/public-types"
 import { RoleSelector } from "@flowagent-public/role-selector"
 import {
@@ -37,7 +37,7 @@ export const PCMemberList: FC = () => {
           content: t("user_management.mes.change_role_suc"),
         })
       } catch (error) {
-        if (isIFLOWAGENTAPiError(error)) {
+        if (isFLOWAGENTAPiError(error)) {
           switch (error.data.errorFlag) {
             case ERROR_FLAG.ERROR_FLAG_ACCESS_DENIED:
             case ERROR_FLAG.ERROR_FLAG_CAN_NOT_INCREASE_TEAM_MEMBER_DUE_TO_NO_BALANCE:

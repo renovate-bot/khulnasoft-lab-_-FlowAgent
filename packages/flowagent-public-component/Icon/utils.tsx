@@ -12,7 +12,7 @@ import GlobalDataIcon from "./actionIcons/globalData"
 import GoogleSheetIcon from "./actionIcons/googlesheets"
 import GraphQLIcon from "./actionIcons/graphql"
 import HuggingFaceIcon from "./actionIcons/huggingface"
-import IFLOWAGENTDriveIcon from "./actionIcons/flowagentDrive"
+import FLOWAGENTDriveIcon from "./actionIcons/flowagentDrive"
 import MariaDbIcon from "./actionIcons/mariadb"
 import MicrosoftSqlIcon from "./actionIcons/microsoftsql"
 import MongoDbIcon from "./actionIcons/mongodb"
@@ -152,7 +152,7 @@ export function getIconFromResourceType(
     case "globalData":
       return <GlobalDataIcon size={size} />
     case "flowagentdrive":
-      return <IFLOWAGENTDriveIcon size={size} />
+      return <FLOWAGENTDriveIcon size={size} />
   }
   return null
 }

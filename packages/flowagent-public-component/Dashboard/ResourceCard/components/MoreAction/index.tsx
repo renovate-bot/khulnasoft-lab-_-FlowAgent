@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { FC, useCallback, useContext } from "react"
@@ -25,7 +25,7 @@ export const ResourceMoreAction: FC<ResourceMoreActionProps> = (props) => {
 
   const handleClickOkOnDeleteModal = useCallback(async () => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "resource_more_delete",
         parameter5: resourceID,
@@ -33,7 +33,7 @@ export const ResourceMoreAction: FC<ResourceMoreActionProps> = (props) => {
       "both",
     )
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
       {
         element: "resource_more_delete_modal",
         parameter5: resourceID,
@@ -55,7 +55,7 @@ export const ResourceMoreAction: FC<ResourceMoreActionProps> = (props) => {
           okLoading: true,
         })
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "resource_more_delete_modal_delete",
             parameter5: resourceID,
@@ -79,7 +79,7 @@ export const ResourceMoreAction: FC<ResourceMoreActionProps> = (props) => {
       },
       onCancel: () => {
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "resource_more_delete_modal_close",
             parameter5: resourceID,

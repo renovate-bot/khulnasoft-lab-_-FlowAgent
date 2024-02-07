@@ -1,9 +1,9 @@
 import { GithubIcon } from "@flowagent-public/icon"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
-  IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME,
 } from "@flowagent-public/mixpanel-utils"
-import { IFLOWAGENTMixpanel } from "@flowagent-public/mixpanel-utils"
+import { FLOWAGENTMixpanel } from "@flowagent-public/mixpanel-utils"
 import { TextLink } from "@flowagent-public/text-link"
 import { isCloudVersion } from "@flowagent-public/utils"
 import { FC, useEffect, useState } from "react"
@@ -57,14 +57,14 @@ export const PCRegister: FC<RegisterProps> = (props) => {
   >()
 
   const validReport = async () => {
-    IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
-      page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+    FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+      page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
       element: "create_account",
     })
     let isValid = await trigger()
     if (isValid) {
       validateReport(
-        IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+        FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
         "create_account",
         true,
         {},
@@ -76,7 +76,7 @@ export const PCRegister: FC<RegisterProps> = (props) => {
   useEffect(() => {
     if (asyncValid && !asyncValid.isValid) {
       validateReport(
-        IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+        FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
         "create_account",
         false,
         errors,
@@ -101,8 +101,8 @@ export const PCRegister: FC<RegisterProps> = (props) => {
                 <TextLink
                   key="go-to-login"
                   onClick={() => {
-                    IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
-                      page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                    FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+                      page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                       element: "sign_in",
                     })
 
@@ -131,15 +131,15 @@ export const PCRegister: FC<RegisterProps> = (props) => {
                     variant="fill"
                     placeholder={t("page.user.sign_up.placeholder.username")}
                     onFocus={() => {
-                      IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
-                        page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                      FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
+                        page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                         element: "username_input",
                         parameter3: getValues().nickname?.length ?? 0,
                       })
                     }}
                     onBlur={() => {
-                      IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
-                        page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                      FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
+                        page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                         element: "username_input",
                         parameter3: getValues().nickname?.length ?? 0,
                       })
@@ -191,15 +191,15 @@ export const PCRegister: FC<RegisterProps> = (props) => {
                     placeholder={t("page.user.sign_up.placeholder.email")}
                     {...(lockedEmail && { value: lockedEmail, disabled: true })}
                     onFocus={() => {
-                      IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
-                        page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                      FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
+                        page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                         element: "email_input",
                         parameter3: getValues().email?.length ?? 0,
                       })
                     }}
                     onBlur={() => {
-                      IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
-                        page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                      FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
+                        page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                         element: "email_input",
                         parameter3: getValues().email?.length ?? 0,
                       })
@@ -259,15 +259,15 @@ export const PCRegister: FC<RegisterProps> = (props) => {
                         "page.user.sign_up.placeholder.verification_code",
                       )}
                       onFocus={() => {
-                        IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
-                          page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                        FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
+                          page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                           element: "verification_code_input",
                           parameter3: getValues().verificationCode?.length ?? 0,
                         })
                       }}
                       onBlur={() => {
-                        IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
-                          page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                        FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
+                          page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                           element: "verification_code_input",
                           parameter3: getValues().verificationCode?.length ?? 0,
                         })
@@ -310,15 +310,15 @@ export const PCRegister: FC<RegisterProps> = (props) => {
                     variant="fill"
                     placeholder={t("page.user.password.placeholder")}
                     onFocus={() => {
-                      IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
-                        page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                      FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.FOCUS, {
+                        page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                         element: "password",
                         parameter3: getValues().password?.length ?? 0,
                       })
                     }}
                     onBlur={() => {
-                      IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
-                        page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
+                      FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.BLUR, {
+                        page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP,
                         element: "password",
                         parameter3: getValues().password?.length ?? 0,
                       })

@@ -1,8 +1,8 @@
 import {
-  IFLOWAGENTMixpanel,
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
-  IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME,
-  IFLOWAGENT_PAGE_NAME,
+  FLOWAGENTMixpanel,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME,
+  FLOWAGENT_PAGE_NAME,
 } from "@flowagent-public/mixpanel-utils"
 import { FieldErrors } from "react-hook-form"
 import { LoginFields } from "../LoginPage/interface"
@@ -10,13 +10,13 @@ import { RegisterFields } from "../RegisterPage/interface"
 import { ResetPwdFields } from "../ResetPasswordPage/interface"
 
 export const validateReport = (
-  page: IFLOWAGENT_PAGE_NAME,
+  page: FLOWAGENT_PAGE_NAME,
   element: string,
   isValid: boolean,
   errors: FieldErrors<RegisterFields & LoginFields & ResetPwdFields>,
 ) => {
   if (isValid) {
-    IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.VALIDATE, {
+    FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.VALIDATE, {
       page,
       element,
       parameter2: "suc",
@@ -25,7 +25,7 @@ export const validateReport = (
   }
   const { email, password, nickname, verificationCode, newPassword } = errors
   const errorList = []
-  if (page === IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP) {
+  if (page === FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP) {
     if (nickname) {
       if (nickname.type === "required") {
         errorList.push("username_blank")
@@ -38,8 +38,8 @@ export const validateReport = (
   }
 
   if (
-    page === IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP ||
-    page === IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD
+    page === FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP ||
+    page === FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD
   ) {
     if (verificationCode && verificationCode.type === "required") {
       errorList.push("verification_code_blank")
@@ -64,7 +64,7 @@ export const validateReport = (
   }
 
   if (!isValid) {
-    IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.VALIDATE, {
+    FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.VALIDATE, {
       page,
       element,
       parameter2: "failed",

@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { FC, useContext, useState } from "react"
@@ -92,7 +92,7 @@ const MissingList: FC<MissingListProps> = (props) => {
     const missingActionIDs = Object.values(missingActionsMap)
       .map((item) => item.actionIDs)
       .flat()
-    track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+    track(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "missing_resource_configure_modal_save",
       parameter1: missingActionIDs.length === updateActionList.length,
     })

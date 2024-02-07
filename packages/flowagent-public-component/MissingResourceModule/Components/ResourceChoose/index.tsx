@@ -1,6 +1,6 @@
 import { getIconFromResourceType } from "@flowagent-public/icon"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { Resource, ResourceType } from "@flowagent-public/public-types"
@@ -114,7 +114,7 @@ const ResourceChoose: FC<ResourceChooseProps> = ({
         }
         onChange={(value) => {
           if (value === "create" && !isAIAgent) {
-            track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+            track(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
               element: "replacement_dropdown_create_new",
             })
             setGeneratorVisible(true)
@@ -123,7 +123,7 @@ const ResourceChoose: FC<ResourceChooseProps> = ({
           changeResourceID(value as string)
         }}
         onClick={() => {
-          track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+          track(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
             element: "replacement_dropdown",
           })
         }}

@@ -1,6 +1,6 @@
 import { Avatar } from "@flowagent-public/avatar"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { getCurrentTeamInfo, getPlanUtils } from "@flowagent-public/user-data"
@@ -11,7 +11,7 @@ import {
 } from "@flowagent-public/user-role-utils"
 import {
   getAuthToken,
-  getIFLOWAGENTBuilderURL,
+  getFLOWAGENTBuilderURL,
   isCloudVersion,
 } from "@flowagent-public/utils"
 import { fromNow } from "@flowagent-public/utils"
@@ -55,7 +55,7 @@ export const PCAppCard: FC<PCAppCardProps> = (props) => {
 
   const onClickCard = useCallback(() => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "card",
         parameter3: "team",
@@ -65,14 +65,14 @@ export const PCAppCard: FC<PCAppCardProps> = (props) => {
     )
     if (canEditApp) {
       window.open(
-        `${getIFLOWAGENTBuilderURL()}/${teamIdentifier}/app/${
+        `${getFLOWAGENTBuilderURL()}/${teamIdentifier}/app/${
           appInfo.appId
         }?token=${getAuthToken()}`,
         "_blank",
       )
     } else if (appInfo.deployed) {
       window.open(
-        `${getIFLOWAGENTBuilderURL()}/${teamIdentifier}/deploy/app/${
+        `${getFLOWAGENTBuilderURL()}/${teamIdentifier}/deploy/app/${
           appInfo.appId
         }?token=${getAuthToken()}`,
         "_blank",

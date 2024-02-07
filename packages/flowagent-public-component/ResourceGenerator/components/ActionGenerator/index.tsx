@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { ActionType, ResourceType } from "@flowagent-public/public-types"
@@ -53,7 +53,7 @@ export const ActionGenerator: FC<ActionGeneratorProps> = function (props) {
   const handleBack = useCallback(
     (page: ActionCreatorPage) => {
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
         {
           element: "resource_configure_back",
           parameter5: currentActionType,
@@ -71,7 +71,7 @@ export const ActionGenerator: FC<ActionGeneratorProps> = function (props) {
         ? "resource_configure_close"
         : "resource_type_modal"
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element,
         parameter5: currentActionType,
@@ -85,7 +85,7 @@ export const ActionGenerator: FC<ActionGeneratorProps> = function (props) {
 
   const handleActionTypeSelect = useCallback(
     (actionType: ActionType) => {
-      track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+      track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "resource_type_modal_resource",
         parameter5: actionType,
       })
@@ -108,7 +108,7 @@ export const ActionGenerator: FC<ActionGeneratorProps> = function (props) {
   useEffect(() => {
     if (currentStep === "createResource" && currentActionType && visible) {
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "resource_configure_modal",
           parameter5: currentActionType,
@@ -121,7 +121,7 @@ export const ActionGenerator: FC<ActionGeneratorProps> = function (props) {
   useEffect(() => {
     if (currentStep === "select" && visible) {
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "resource_type_modal",
           parameter5: currentActionType,

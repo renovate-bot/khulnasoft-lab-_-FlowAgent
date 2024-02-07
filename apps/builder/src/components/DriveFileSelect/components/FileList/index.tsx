@@ -1,7 +1,7 @@
 import { getFileIconByContentType } from "@flowagent-public/icon"
 import {
+  FLOWAGENTFileInfo,
   GCS_OBJECT_TYPE,
-  IFLOWAGENTFileInfo,
 } from "@flowagent-public/public-types"
 import VirtualList from "rc-virtual-list"
 import { FC, MouseEvent, useCallback, useRef } from "react"
@@ -37,7 +37,7 @@ const FileList: FC<FileListProps> = (props) => {
   const { t } = useTranslation()
 
   const handleClickItem = useCallback(
-    (e: MouseEvent<HTMLLabelElement>, item: IFLOWAGENTFileInfo) => {
+    (e: MouseEvent<HTMLLabelElement>, item: FLOWAGENTFileInfo) => {
       e.stopPropagation()
       if (
         item.type === GCS_OBJECT_TYPE.FOLDER ||
@@ -71,7 +71,7 @@ const FileList: FC<FileListProps> = (props) => {
       data={listData}
       onScroll={onScroll}
     >
-      {(item: IFLOWAGENTFileInfo) => {
+      {(item: FLOWAGENTFileInfo) => {
         return (
           <label
             css={

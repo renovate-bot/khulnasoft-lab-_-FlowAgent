@@ -1,6 +1,6 @@
 import { UpgradeIcon } from "@flowagent-public/icon"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { USER_ROLE } from "@flowagent-public/public-types"
@@ -106,7 +106,7 @@ export const AppPublicPC: FC<AppPublicProps> = (props) => {
   const handleContributeChange = useCallback(
     async (value: boolean) => {
       const currentTime = performance.now()
-      track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+      track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "invite_modal_contribute_switch",
         parameter4: !value,
         parameter5: appID,
@@ -128,7 +128,7 @@ export const AppPublicPC: FC<AppPublicProps> = (props) => {
         } else {
           await fetchRemoveAppToMarket(ownerTeamID, appID)
         }
-        track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.REQUEST, {
+        track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.REQUEST, {
           element: "invite_modal_contribute_switch",
           consume: performance.now() - currentTime,
           parameter2: "suc",
@@ -138,7 +138,7 @@ export const AppPublicPC: FC<AppPublicProps> = (props) => {
         onAppContribute?.(value)
         onAppPublic?.(value)
         value &&
-          track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW, {
+          track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW, {
             element: "invite_modal_contribute_copy",
             parameter5: appID,
           })
@@ -146,7 +146,7 @@ export const AppPublicPC: FC<AppPublicProps> = (props) => {
         message.error({
           content: t("user_management.modal.message.make_public_failed"),
         })
-        track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.REQUEST, {
+        track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.REQUEST, {
           element: "invite_modal_contribute_switch",
           consume: performance.now() - currentTime,
           parameter2: "failed",

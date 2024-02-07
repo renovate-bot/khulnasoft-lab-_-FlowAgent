@@ -1,9 +1,9 @@
 import { SerializedStyles } from "@emotion/react"
-import { IFLOWAGENTCodeMirrorProps } from "./CodeMirror/interface"
+import { FLOWAGENTCodeMirrorProps } from "./CodeMirror/interface"
 
 export interface CodeEditorProps
   extends Omit<
-    IFLOWAGENTCodeMirrorProps,
+    FLOWAGENTCodeMirrorProps,
     | "hasError"
     | "resultType"
     | "result"

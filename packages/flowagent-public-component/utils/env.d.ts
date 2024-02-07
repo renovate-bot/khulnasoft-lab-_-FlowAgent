@@ -1,12 +1,12 @@
 interface ImportMetaEnv {
-  readonly IFLOWAGENT_API_BASE_URL: string
-  readonly IFLOWAGENT_MARKET_URL: string
-  readonly IFLOWAGENT_INSTANCE_ID: string
-  readonly IFLOWAGENT_SENTRY_ENV: string
-  readonly IFLOWAGENT_SENTRY_SERVER_API: string
-  readonly IFLOWAGENT_APP_VERSION: string
-  readonly IFLOWAGENT_APP_ENV: string
-  readonly IFLOWAGENT_GOOGLE_MAP_KEY: string
+  readonly FLOWAGENT_API_BASE_URL: string
+  readonly FLOWAGENT_MARKET_URL: string
+  readonly FLOWAGENT_INSTANCE_ID: string
+  readonly FLOWAGENT_SENTRY_ENV: string
+  readonly FLOWAGENT_SENTRY_SERVER_API: string
+  readonly FLOWAGENT_APP_VERSION: string
+  readonly FLOWAGENT_APP_ENV: string
+  readonly FLOWAGENT_GOOGLE_MAP_KEY: string
 }
 
 interface ImportMeta {

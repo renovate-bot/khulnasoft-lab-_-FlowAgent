@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { DOC_PREFIX } from "@flowagent-public/public-configs"
@@ -8,7 +8,7 @@ import { isCloudVersion } from "@flowagent-public/utils"
 import { FC, useContext } from "react"
 import { Trans, useTranslation } from "react-i18next"
 import DesktopLeftContent from "../../assets/desktop-left-content.svg?react"
-import IFLOWAGENTLogoWhite from "../../assets/flowagent-logo-white.svg?react"
+import FLOWAGENTLogoWhite from "../../assets/flowagent-logo-white.svg?react"
 import { LayoutProps } from "../interface"
 import {
   flowagentLogoStyle,
@@ -27,7 +27,7 @@ export const UserLayout: FC<LayoutProps> = ({ children }) => {
 
   const handleLinkOpenClick = (link: string) => {
     if (isCloudVersion) {
-      track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+      track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
         element: /privacy/.test(link) ? "privacy" : "terms",
       })
       window.open(DOC_PREFIX + link, "_blank")
@@ -39,7 +39,7 @@ export const UserLayout: FC<LayoutProps> = ({ children }) => {
   return (
     <div css={layoutWrapperStyle}>
       <aside css={leftAsideWrapperStyle}>
-        <IFLOWAGENTLogoWhite css={flowagentLogoStyle} />
+        <FLOWAGENTLogoWhite css={flowagentLogoStyle} />
         <span css={sloganStyle}>{t("page.user.description")}</span>
         <section css={sectionBackgroundStyle}>
           <span css={sectionBgContentStyle}>

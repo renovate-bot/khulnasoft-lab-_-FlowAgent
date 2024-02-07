@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import {
@@ -76,7 +76,7 @@ export const AvatarUpload: FC<AvatarUploadProps> = (props) => {
 
   const onCloseModal = () => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "avater_crop_close",
       },
@@ -100,7 +100,7 @@ export const AvatarUpload: FC<AvatarUploadProps> = (props) => {
       if (file.size >= FILE_SIZE_LIMIT) {
         message.error({ content: t("image_exceed") })
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.VALIDATE,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.VALIDATE,
           {
             element: "avater_crop_save",
             parameter1: Math.floor(file.size / 1024),
@@ -114,7 +114,7 @@ export const AvatarUpload: FC<AvatarUploadProps> = (props) => {
       setFile(file)
       setModalVisible(true)
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.VALIDATE,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.VALIDATE,
         {
           element: "avater_crop_save",
           parameter1: Math.floor(file.size / 1024),
@@ -139,7 +139,7 @@ export const AvatarUpload: FC<AvatarUploadProps> = (props) => {
 
   const handleCrop = async () => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "avater_crop_save",
       },
@@ -168,7 +168,7 @@ export const AvatarUpload: FC<AvatarUploadProps> = (props) => {
   useEffect(() => {
     if (modalVisible) {
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "avater_crop",
         },

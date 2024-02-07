@@ -1,7 +1,7 @@
 import { Avatar } from "@flowagent-public/avatar"
-import { ERROR_FLAG, isIFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
+import { ERROR_FLAG, isFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { USER_ROLE } from "@flowagent-public/public-types"
@@ -73,7 +73,7 @@ export const InviteByEmailMobile: FC<InviteByEmailProps> = (props) => {
   const handleInvite = useCallback(
     async (e: KeyboardEvent<HTMLInputElement>) => {
       if (!currentValue) return
-      track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+      track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
         element: "share_modal_send",
         parameter5: itemID,
       })
@@ -123,7 +123,7 @@ export const InviteByEmailMobile: FC<InviteByEmailProps> = (props) => {
         setCurrentValue("")
         message.success({ content: t("user_management.mes.invite_suc") })
       } catch (e) {
-        if (isIFLOWAGENTAPiError(e)) {
+        if (isFLOWAGENTAPiError(e)) {
           if (e.data.errorFlag === ERROR_FLAG.ERROR_FLAG_EMAIL_ALREADY_USED) {
             message.error({
               content: t("user_management.modal.email.invited"),

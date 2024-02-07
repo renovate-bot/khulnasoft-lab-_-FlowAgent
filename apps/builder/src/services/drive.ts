@@ -148,7 +148,7 @@ export const fetchDownloadURLByTinyURL = async (
 }
 
 // -------------------
-export interface IFLOWAGENTFileInfo {
+export interface FLOWAGENTFileInfo {
   id: string
   name: string
   type: GCS_OBJECT_TYPE
@@ -174,7 +174,7 @@ export interface IFetchFileListRequestData {
 export interface IFetchFileListResponseData {
   path: string
   currentFolderID: string
-  files: IFLOWAGENTFileInfo[]
+  files: FLOWAGENTFileInfo[]
   total: number
   pageSize: number
   pageIndex: number

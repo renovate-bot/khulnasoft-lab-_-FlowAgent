@@ -1,10 +1,10 @@
 import { isIllaErrorInterface } from "@flowagent-public/utils"
 import { AxiosResponse } from "axios"
-import { IFLOWAGENTApiError } from "./interface"
+import { FLOWAGENTApiError } from "./interface"
 
-export const isIFLOWAGENTAPiError = (
+export const isFLOWAGENTAPiError = (
   error: unknown,
-): error is AxiosResponse<IFLOWAGENTApiError> => {
+): error is AxiosResponse<FLOWAGENTApiError> => {
   return (
     typeof error === "object" &&
     error !== null &&

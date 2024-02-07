@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { USER_ROLE } from "@flowagent-public/public-types"
@@ -84,7 +84,7 @@ export const AgentToMarketplacePC: FC<AgentToMarketplaceProps> = (props) => {
                 checked={agentContributed}
                 colorScheme={getColor("grayBlue", "02")}
                 onChange={async (value) => {
-                  track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+                  track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
                     element: "share_modal_contribute_switch",
                     parameter2: !value,
                     parameter5: agentID,

@@ -1,6 +1,6 @@
 import { AuthShown, SHOW_RULES } from "@flowagent-public/auth-shown"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { USER_ROLE, USER_STATUS } from "@flowagent-public/public-types"
@@ -69,7 +69,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
       },
       onOk: async () => {
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "remove_modal_remove",
           },
@@ -90,7 +90,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
       },
       onCancel: () => {
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "remove_modal_cancel",
           },
@@ -99,7 +99,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
       },
     })
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
       {
         element: "remove_modal",
       },
@@ -119,7 +119,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
       },
       onOk: async () => {
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "transfer_modal_transfer",
           },
@@ -149,7 +149,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
       },
       onCancel: () => {
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "transfer_modal_cancel",
           },
@@ -158,7 +158,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
       },
     })
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
       {
         element: "transfer_modal",
       },
@@ -169,7 +169,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
   useEffect(() => {
     if (!disabled) {
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "more_by_member",
         },
@@ -190,7 +190,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
               userStatus !== USER_STATUS.PENDING
             ) {
               track?.(
-                IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+                FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
                 {
                   element: "transfer",
                 },
@@ -198,7 +198,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
               )
             }
             track?.(
-              IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+              FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
               {
                 element: "remove",
               },
@@ -220,7 +220,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
                     value="trans"
                     onClick={() => {
                       track?.(
-                        IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+                        FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
                         {
                           element: "transfer",
                         },
@@ -243,7 +243,7 @@ export const MoreAction: FC<MoreActionProps> = (props) => {
                 value="remove"
                 onClick={() => {
                   track?.(
-                    IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+                    FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
                     {
                       element: "remove",
                     },

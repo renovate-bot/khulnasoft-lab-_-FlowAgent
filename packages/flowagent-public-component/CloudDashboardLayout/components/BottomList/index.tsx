@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { DOC_PREFIX } from "@flowagent-public/public-configs"
@@ -7,7 +7,7 @@ import { USER_ROLE } from "@flowagent-public/public-types"
 import { getCurrentTeamInfo } from "@flowagent-public/user-data"
 import {
   getAuthToken,
-  getIFLOWAGENTBuilderURL,
+  getFLOWAGENTBuilderURL,
   useIsMobile,
 } from "@flowagent-public/utils"
 import { FC, useContext, useEffect } from "react"
@@ -55,7 +55,7 @@ export const BottomList: FC<BottomListProps> = (props) => {
     {
       labelName: t("page.left.menu.tutorial"),
       labelKey: "tutorial",
-      href: `${getIFLOWAGENTBuilderURL()}/${teamIdentifier}/guide?token=${getAuthToken()}`,
+      href: `${getFLOWAGENTBuilderURL()}/${teamIdentifier}/guide?token=${getAuthToken()}`,
       icon: <TutorialIcon />,
       hidden: !showTutorial,
       onClickCallback: onClickMenuItemCallback,
@@ -79,7 +79,7 @@ export const BottomList: FC<BottomListProps> = (props) => {
   useEffect(() => {
     if (showTutorial) {
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "menu_tutorial",
         },

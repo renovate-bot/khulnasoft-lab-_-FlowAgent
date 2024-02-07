@@ -4,12 +4,12 @@ import {
 } from "@flowagent-public/dynamic-string"
 import { debounce } from "lodash-es"
 import { forwardRef, useMemo } from "react"
-import { IFLOWAGENTCodeMirrorCore } from "./CodeMirror/core"
+import { FLOWAGENTCodeMirrorCore } from "./CodeMirror/core"
 import { IExpressionShape } from "./CodeMirror/extensions/interface"
 import { flowagentCodeMirrorTooltipStyle } from "./CodeMirror/theme"
 import { fixedValue } from "./CodeMirror/utils"
 import { CodeEditorProps } from "./interface"
-import { IFLOWAGENTCodeMirrorWrapperStyle } from "./style"
+import { FLOWAGENTCodeMirrorWrapperStyle } from "./style"
 
 export const CodeEditor = forwardRef<HTMLDivElement, CodeEditorProps>(
   (props) => {
@@ -58,12 +58,12 @@ export const CodeEditor = forwardRef<HTMLDivElement, CodeEditorProps>(
     return (
       <div
         css={[
-          IFLOWAGENTCodeMirrorWrapperStyle,
+          FLOWAGENTCodeMirrorWrapperStyle,
           wrapperCss,
           flowagentCodeMirrorTooltipStyle,
         ]}
       >
-        <IFLOWAGENTCodeMirrorCore
+        <FLOWAGENTCodeMirrorCore
           className={className}
           placeholder={placeholder}
           value={fixedValue(value)}

@@ -13,7 +13,7 @@ export const Basic: StoryFn<DescriptionProps> = (args) => (
     data={[
       {
         label: "Name",
-        value: "IFLOWAGENT",
+        value: "FLOWAGENT",
       },
       {
         label: "Mobile",

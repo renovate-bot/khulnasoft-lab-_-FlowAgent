@@ -97,4 +97,4 @@ export const formatDate = (dateString: string) => {
   }
 }
 
-export const IFLOWAGENTDayjs = dayjs
+export const FLOWAGENTDayjs = dayjs

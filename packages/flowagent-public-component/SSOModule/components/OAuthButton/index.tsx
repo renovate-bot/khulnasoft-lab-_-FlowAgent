@@ -1,7 +1,7 @@
 import {
-  IFLOWAGENTMixpanel,
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
-  IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME,
+  FLOWAGENTMixpanel,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME,
 } from "@flowagent-public/mixpanel-utils"
 import { FC, useState } from "react"
 import { useSearchParams } from "react-router-dom"
@@ -17,8 +17,8 @@ export const OAuthButton: FC<OAuthButtonProps> = (props) => {
   const utmKeys = ["utm_source", "utm_medium", "utm_campaign"]
 
   const onClickButton = async () => {
-    IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
-      page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.LOGIN,
+    FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+      page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.LOGIN,
       element: `${props.type}_sign_in`,
     })
 

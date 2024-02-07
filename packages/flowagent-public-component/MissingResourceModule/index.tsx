@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { FC, useContext } from "react"
@@ -15,7 +15,7 @@ const MissingResources: FC<{
   const { track } = useContext(MixpanelTrackContext)
   const handleCloseModal = () => {
     changeShown(false)
-    track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+    track(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "missing_resource_configure_modal_cancel",
     })
   }
@@ -30,7 +30,7 @@ const MissingResources: FC<{
       withoutPadding
       maskClosable={false}
       afterOpen={() => {
-        track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW, {
+        track(FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW, {
           element: "missing_resource_configure_modal",
         })
       }}

@@ -5,7 +5,7 @@ export interface RequestHandlerOptions {
   teamID?: string
 }
 
-export interface IFLOWAGENTApiError {
+export interface FLOWAGENTApiError {
   errorCode: string | number
   errorFlag: ERROR_FLAG
   errorMessage: string

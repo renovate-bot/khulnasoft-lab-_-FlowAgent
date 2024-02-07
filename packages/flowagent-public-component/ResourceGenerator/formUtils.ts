@@ -1,4 +1,4 @@
-import { isIFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
+import { isFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
 import {
   DATABASE_INDEX,
   DEFAULT_NAME,
@@ -12,7 +12,7 @@ import {
   ResourceType,
   RestApiAuth,
 } from "@flowagent-public/public-types"
-import { IFLOWAGENTPublicStorage } from "@flowagent-public/utils"
+import { FLOWAGENTPublicStorage } from "@flowagent-public/utils"
 import { FieldValues, UseFormHandleSubmit } from "react-hook-form"
 import { getI18n } from "react-i18next"
 import { createMessage } from "@flowagent-design/react"
@@ -230,10 +230,10 @@ function getActionContentByType(data: FieldValues, type: ResourceType) {
     case "googlesheets":
       const status =
         data.authentication === "oauth2" &&
-        IFLOWAGENTPublicStorage.getLocalStorage("oAuthStatus")
+        FLOWAGENTPublicStorage.getLocalStorage("oAuthStatus")
       let oAuthOpts = {}
       if (status) {
-        IFLOWAGENTPublicStorage.removeLocalStorage("oAuthStatus")
+        FLOWAGENTPublicStorage.removeLocalStorage("oAuthStatus")
         oAuthOpts = {
           status,
         }
@@ -350,7 +350,7 @@ export function onActionConfigElementSubmit(
         content: getI18n().t("dashboard.resource.save_success"),
       })
     } catch (e) {
-      if (isIFLOWAGENTAPiError(e)) {
+      if (isFLOWAGENTAPiError(e)) {
         message.error({
           content:
             e.data.errorMessage || getI18n().t("dashboard.resource.save_fail"),
@@ -376,7 +376,7 @@ export async function onActionConfigElementTest(
       content: getI18n().t("dashboard.resource.test_success"),
     })
   } catch (error) {
-    if (isIFLOWAGENTAPiError(error)) {
+    if (isFLOWAGENTAPiError(error)) {
       message.error({
         content: error.data.errorMessage,
       })

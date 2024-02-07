@@ -1,7 +1,7 @@
 import { AnonymousIcon, FolderIcon } from "@flowagent-public/icon"
 import {
+  FLOWAGENTFileInfo,
   GCS_OBJECT_TYPE,
-  IFLOWAGENTFileInfo,
 } from "@flowagent-public/public-types"
 import VirtualList from "rc-virtual-list"
 import { FC, useCallback, useContext, useRef } from "react"
@@ -55,7 +55,7 @@ const FolderList: FC<FolderListProps> = (props) => {
       data={listData}
       onScroll={onScroll}
     >
-      {(item: IFLOWAGENTFileInfo) => {
+      {(item: FLOWAGENTFileInfo) => {
         return (
           <div
             css={listItemContainerStyle}

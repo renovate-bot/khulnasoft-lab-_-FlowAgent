@@ -1,6 +1,6 @@
 import { getIconFromResourceType } from "@flowagent-public/icon"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { ResourceType } from "@flowagent-public/public-types"
@@ -66,7 +66,7 @@ export const ActionResourceSelector: FC<ActionResourceSelectorProps> = (
       setLoading,
     )
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "resource_list_create_action",
         parameter1: actionType,
@@ -83,7 +83,7 @@ export const ActionResourceSelector: FC<ActionResourceSelectorProps> = (
 
   useEffect(() => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
       {
         element: "resource_list_show",
         parameter1: actionType,
@@ -145,7 +145,7 @@ export const ActionResourceSelector: FC<ActionResourceSelectorProps> = (
             colorScheme="gray"
             onClick={() => {
               track?.(
-                IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+                FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
                 {
                   element: "resource_list_new",
                   parameter1: actionType,

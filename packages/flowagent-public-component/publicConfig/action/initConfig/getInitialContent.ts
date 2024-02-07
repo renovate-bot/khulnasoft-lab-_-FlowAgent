@@ -13,7 +13,7 @@ import { FirebaseActionInitial } from "./firebaseAction"
 import { GoogleSheetsActionInitial } from "./googleSheetsAction"
 import { GraphQLActionInitial } from "./graphqlAction"
 import { HuggingFaceActionInitial } from "./huggingFaceAction"
-import { IFLOWAGENTDriveActionInitial } from "./flowagentDriveAction"
+import { FLOWAGENTDriveActionInitial } from "./flowagentDriveAction"
 import { MicrosoftSqlActionInitial } from "./microsoftSqlAction"
 import { MongoDbActionInitial } from "./mongoDbAction"
 import { MysqlLikeActionInitial } from "./mysqlLikeAction"
@@ -74,7 +74,7 @@ export function getInitialContent(actionType: ActionType): ActionContent {
     case "airtable":
       return AirtableActionConfigInitial
     case "flowagentdrive":
-      return IFLOWAGENTDriveActionInitial
+      return FLOWAGENTDriveActionInitial
     default:
       return {} as ActionContent
   }

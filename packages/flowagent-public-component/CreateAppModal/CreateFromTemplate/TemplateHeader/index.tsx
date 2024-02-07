@@ -21,7 +21,7 @@ const TemplateHeader: FC<TemplateHeaderProps> = ({ closeModal, onSearch }) => {
   return (
     <div css={headerContainerStyle}>
       <div css={titleStyle}>
-        <span>IFLOWAGENT App</span>
+        <span>FLOWAGENT App</span>
         <div css={modalCloseIconStyle} onClick={closeModal}>
           <CloseIcon size="12px" />
         </div>

@@ -8,7 +8,7 @@
     "component"
   ],
   "sideEffects": false,
-  "author": "IFLOWAGENT Cloud <opensource@flowagentsoft.com>",
+  "author": "FLOWAGENT Cloud <opensource@flowagentsoft.com>",
   "homepage": "https://github.com/khulnasoft-lab/flowagent-design",
   "license": "Apache-2.0",
   "main": "src/index.ts",

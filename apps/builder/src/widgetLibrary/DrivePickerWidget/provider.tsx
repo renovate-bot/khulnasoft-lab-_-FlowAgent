@@ -5,7 +5,7 @@ import {
 import {
   DRIVE_FILE_TYPE,
   EXPIRATION_TYPE,
-  IFLOWAGENTFileInfo,
+  FLOWAGENTFileInfo,
 } from "@flowagent-public/public-types"
 import { FC, ReactNode, useCallback, useState } from "react"
 import { useSelector } from "react-redux"
@@ -66,7 +66,7 @@ export const DrivePickerProvider: FC<Props> = (props) => {
     removeSuffixPath(path),
     allowAnonymousUse,
   )
-  const [fileList, setFileList] = useState<IFLOWAGENTFileInfo[]>([])
+  const [fileList, setFileList] = useState<FLOWAGENTFileInfo[]>([])
   const [modalVisible, setModalVisible] = useState(false)
   const appInfo = useSelector(getAppInfo)
 

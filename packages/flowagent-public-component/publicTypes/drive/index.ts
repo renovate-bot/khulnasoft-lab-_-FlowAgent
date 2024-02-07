@@ -35,7 +35,7 @@ export enum SORTED_TYPE {
   descend = "desc",
 }
 
-export interface IIFLOWAGENTFileInfo {
+export interface IFLOWAGENTFileInfo {
   id: string
   name: string
   type: GCS_OBJECT_TYPE

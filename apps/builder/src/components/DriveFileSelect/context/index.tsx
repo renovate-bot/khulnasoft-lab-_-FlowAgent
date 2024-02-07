@@ -1,10 +1,10 @@
 import { createContext } from "react"
-import { IFLOWAGENTFileInfo } from "@/services/drive"
+import { FLOWAGENTFileInfo } from "@/services/drive"
 import { FileToPanel } from "../interface"
 
 interface Injected {
   modalVisible: boolean
-  fileList: IFLOWAGENTFileInfo[]
+  fileList: FLOWAGENTFileInfo[]
   currentPath: string
   totalPath: string
   sizeType?: "kb" | "mb"

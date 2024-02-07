@@ -53,7 +53,7 @@ export const Header: FC<ResourceHeaderProps> = (props) => {
             {!NOT_NEED_TEST_CONNECT_RESOURCE_TYPE.includes(resourceType) && (
               <TestConnectButton resourceType={resourceType} />
             )}
-            {import.meta.env.IFLOWAGENT_APP_ENV === "test" &&
+            {import.meta.env.FLOWAGENT_APP_ENV === "test" &&
             resourceType === "googlesheets" ? (
               <GoogleCreateButton />
             ) : (

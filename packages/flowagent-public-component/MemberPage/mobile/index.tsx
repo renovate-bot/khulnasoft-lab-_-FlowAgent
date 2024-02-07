@@ -1,6 +1,6 @@
 import { InviteMemberMobile } from "@flowagent-public/invite-modal"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import {
@@ -63,7 +63,7 @@ export const MobileMemberPage: FC = () => {
 
   const handleClickInviteButton = useCallback(() => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "invite_entry",
       },
@@ -135,7 +135,7 @@ export const MobileMemberPage: FC = () => {
   useEffect(() => {
     showInviteButton &&
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "invite_entry",
         },

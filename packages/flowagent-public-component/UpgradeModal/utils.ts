@@ -1,12 +1,12 @@
-import { ERROR_FLAG, isIFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
+import { ERROR_FLAG, isFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
 import {
-  IFLOWAGENTMixpanel,
-  IFLOWAGENTProperties,
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
-  IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME,
+  FLOWAGENTMixpanel,
+  FLOWAGENTProperties,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME,
 } from "@flowagent-public/mixpanel-utils"
 import { SUBSCRIBE_PLAN } from "@flowagent-public/public-types"
-import { getIFLOWAGENTCloudURL, isIllaErrorInterface } from "@flowagent-public/utils"
+import { getFLOWAGENTCloudURL, isIllaErrorInterface } from "@flowagent-public/utils"
 import { createCollarModal, createTeamLimitModal } from "./hook"
 import { CollarModalType, FREE_TEAM_LIMIT_TYPE } from "./interface"
 
@@ -21,7 +21,7 @@ export function getSuccessRedirectWithParams(
     )
     .join("&")
 
-  return `${getIFLOWAGENTCloudURL()}${redirectPath}?${paramString}`
+  return `${getFLOWAGENTCloudURL()}${redirectPath}?${paramString}`
 }
 
 export const handleCollaPurchaseError = (
@@ -31,7 +31,7 @@ export const handleCollaPurchaseError = (
 ) => {
   const collaModal = createCollarModal()
   if (
-    isIFLOWAGENTAPiError(e) &&
+    isFLOWAGENTAPiError(e) &&
     (e.data.errorFlag === ERROR_FLAG.ERROR_FLAG_INSUFFICIENT_COFLOWAGENT ||
       e.data.errorFlag === ERROR_FLAG.ERROR_FLAG_INSUFFICIENT_DRIVE_VOLUME ||
       e.data.errorFlag ===
@@ -53,7 +53,7 @@ export const handleCollaPurchaseError = (
   return false
 }
 
-export const handleCollaPurchaseErrorByIFLOWAGENTInnerError = (
+export const handleCollaPurchaseErrorByFLOWAGENTInnerError = (
   e: unknown,
   modalType: CollarModalType,
   from: string,
@@ -87,7 +87,7 @@ export const handleFreeTeamLimitError = (
 ) => {
   const limitTeamModal = createTeamLimitModal()
   if (
-    isIFLOWAGENTAPiError(e) &&
+    isFLOWAGENTAPiError(e) &&
     e.data.errorFlag === ERROR_FLAG.ERROR_FLAG_OVER_MAX_FREE_TEAM_LIMIT
   ) {
     limitTeamModal?.({
@@ -111,14 +111,14 @@ export const isSubscribeForDrawer = (subscribePlan?: SUBSCRIBE_PLAN) => {
 }
 
 export const track = (
-  event: IFLOWAGENT_MIXPANEL_EVENT_TYPE,
-  properties: Omit<IFLOWAGENTProperties, "page"> = {},
+  event: FLOWAGENT_MIXPANEL_EVENT_TYPE,
+  properties: Omit<FLOWAGENTProperties, "page"> = {},
   userType: string,
   teamID: string | undefined,
   userID: string | undefined,
 ) => {
-  IFLOWAGENTMixpanel.track(event, {
-    page: IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.PLACEHOLDER,
+  FLOWAGENTMixpanel.track(event, {
+    page: FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.PLACEHOLDER,
     ...properties,
     team_id: teamID ?? "-1",
     user_id: userID ?? "-1",

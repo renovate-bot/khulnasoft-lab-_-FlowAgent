@@ -1,24 +1,24 @@
-type IFLOWAGENTPropertiesPrefix<T extends string, U> = `${T}${string & U}`
+type FLOWAGENTPropertiesPrefix<T extends string, U> = `${T}${string & U}`
 
-type IFLOWAGENTPrefixedPropertiesInterface<T extends string, U> = {
-  [key in IFLOWAGENTPropertiesPrefix<T, keyof U>]: unknown
+type FLOWAGENTPrefixedPropertiesInterface<T extends string, U> = {
+  [key in FLOWAGENTPropertiesPrefix<T, keyof U>]: unknown
 }
 
-interface IFLOWAGENTExtendedProperties {
+interface FLOWAGENTExtendedProperties {
   [key: string]: unknown
 }
 
-interface IFLOWAGENTBaseProperties {
-  page: IFLOWAGENT_PAGE_NAME
+interface FLOWAGENTBaseProperties {
+  page: FLOWAGENT_PAGE_NAME
   element?: string
   consume?: string | number
   team_id?: string
   user_id?: string
 }
 
-type IFLOWAGENTPrefixedExtendProperties = IFLOWAGENTPrefixedPropertiesInterface<
+type FLOWAGENTPrefixedExtendProperties = FLOWAGENTPrefixedPropertiesInterface<
   "parameter",
-  IFLOWAGENTExtendedProperties
+  FLOWAGENTExtendedProperties
 >
 
 /**
@@ -38,9 +38,9 @@ type IFLOWAGENTPrefixedExtendProperties = IFLOWAGENTPrefixedPropertiesInterface<
  * parameter11: user_type
  * 其他字段均为预留字段
  */
-export type IFLOWAGENTProperties = IFLOWAGENTBaseProperties & IFLOWAGENTPrefixedExtendProperties
+export type FLOWAGENTProperties = FLOWAGENTBaseProperties & FLOWAGENTPrefixedExtendProperties
 
-export enum IFLOWAGENT_MIXPANEL_EVENT_TYPE {
+export enum FLOWAGENT_MIXPANEL_EVENT_TYPE {
   VISIT = "visit",
   SHOW = "show",
   CLICK = "click",
@@ -59,10 +59,10 @@ export enum IFLOWAGENT_MIXPANEL_EVENT_TYPE {
   HOVER = "hover",
   CHANGE = "change",
   DELETE = "delete",
-  IFLOWAGENT_ACTIVE = "flowagent_active",
+  FLOWAGENT_ACTIVE = "flowagent_active",
 }
 
-export enum IFLOWAGENT_MIXPANEL_CLOUD_PAGE_NAME {
+export enum FLOWAGENT_MIXPANEL_CLOUD_PAGE_NAME {
   HOMEPAGE = "cloud_homepage",
   WORKSPACE = "cloud_workspace",
   MEMBER = "cloud_member",
@@ -85,7 +85,7 @@ export enum IFLOWAGENT_MIXPANEL_CLOUD_PAGE_NAME {
   FLOW_DASHBOARD = "flow_dashboard",
 }
 
-export enum IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME {
+export enum FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME {
   LOGIN = "login",
   SIGNUP = "sign_up",
   FORGET_PASSWORD = "forget_password",
@@ -94,7 +94,7 @@ export enum IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME {
   PLACEHOLDER = "flowagent",
 }
 
-export enum IFLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME {
+export enum FLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME {
   TUTORIAL = "builder_tutorial",
   EDITOR = "builder_editor",
   PREVIEW = "app_preview",
@@ -105,20 +105,20 @@ export enum IFLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME {
   RESOURCE_EDIT = "resource_edit",
 }
 
-export enum IFLOWAGENT_MIXPANEL_MARKET_PAGE_NAME {
+export enum FLOWAGENT_MIXPANEL_MARKET_PAGE_NAME {
   COMMUNITY_AGENT_HOMEPAGE = "community_agent_homepage",
   COMMUNITY_AGENT_DETAIL = "community_agent_detail",
   COMMUNITY_APP_HOMEPAGE = "community_app_homepage",
   COMMUNITY_APP_DETAIL = "community_app_detail",
 }
 
-export enum IFLOWAGENT_MIXPANEL_FLOW_PAGE_NAME {
+export enum FLOWAGENT_MIXPANEL_FLOW_PAGE_NAME {
   EDITOR = "flow_editor",
 }
 
-export type IFLOWAGENT_PAGE_NAME =
-  | IFLOWAGENT_MIXPANEL_CLOUD_PAGE_NAME
-  | IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME
-  | IFLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME
-  | IFLOWAGENT_MIXPANEL_MARKET_PAGE_NAME
-  | IFLOWAGENT_MIXPANEL_FLOW_PAGE_NAME
+export type FLOWAGENT_PAGE_NAME =
+  | FLOWAGENT_MIXPANEL_CLOUD_PAGE_NAME
+  | FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME
+  | FLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME
+  | FLOWAGENT_MIXPANEL_MARKET_PAGE_NAME
+  | FLOWAGENT_MIXPANEL_FLOW_PAGE_NAME

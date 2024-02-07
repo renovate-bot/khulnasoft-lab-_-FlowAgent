@@ -1,5 +1,5 @@
 import { load } from "@fingerprintjs/fingerprintjs"
-import { IFLOWAGENTPublicStorage } from "@flowagent-public/utils"
+import { FLOWAGENTPublicStorage } from "@flowagent-public/utils"
 
 const generateUUID = async () => {
   const fp = await load()
@@ -8,11 +8,11 @@ const generateUUID = async () => {
 }
 
 export const getDeviceUUID = async () => {
-  if (!IFLOWAGENTPublicStorage.getLocalStorage("deviceID")) {
+  if (!FLOWAGENTPublicStorage.getLocalStorage("deviceID")) {
     const deviceID = await generateUUID()
-    IFLOWAGENTPublicStorage.setLocalStorage("deviceID", deviceID)
+    FLOWAGENTPublicStorage.setLocalStorage("deviceID", deviceID)
   }
-  return IFLOWAGENTPublicStorage.getLocalStorage("deviceID") as string
+  return FLOWAGENTPublicStorage.getLocalStorage("deviceID") as string
 }
 
 export const getBrowserLanguage = () => {

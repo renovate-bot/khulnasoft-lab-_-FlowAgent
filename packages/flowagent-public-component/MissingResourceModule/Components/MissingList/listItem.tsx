@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { FC, useContext } from "react"
@@ -64,7 +64,7 @@ export const ListItem: FC<ItemProps> = (props) => {
   }
 
   const openTutorial = () => {
-    track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+    track(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "watch_tutorial",
     })
     window.open(tutorialHref, "_blank", "width=800px,height=500px")

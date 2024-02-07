@@ -68,7 +68,7 @@ export function getResourceNameFromResourceType(
     case "globalData":
       return "Global Data"
     case "flowagentdrive":
-      return "IFLOWAGENT Drive"
+      return "FLOWAGENT Drive"
     default:
       return ""
   }

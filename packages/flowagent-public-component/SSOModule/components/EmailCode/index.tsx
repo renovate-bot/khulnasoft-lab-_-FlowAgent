@@ -1,8 +1,8 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
-  IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME,
 } from "@flowagent-public/mixpanel-utils"
-import { IFLOWAGENTMixpanel } from "@flowagent-public/mixpanel-utils"
+import { FLOWAGENTMixpanel } from "@flowagent-public/mixpanel-utils"
 import { FC } from "react"
 import { useFormContext } from "react-hook-form"
 import { useTranslation } from "react-i18next"
@@ -60,11 +60,11 @@ export const EmailCode: FC<EmailCodeProps> = (props) => {
       colorScheme="techPurple"
       hoverable={false}
       onClick={async () => {
-        IFLOWAGENTMixpanel.track(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+        FLOWAGENTMixpanel.track(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
           page:
             usage === "signup"
-              ? IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP
-              : IFLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
+              ? FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.SIGNUP
+              : FLOWAGENT_MIXPANEL_PUBLIC_PAGE_NAME.FORGET_PASSWORD,
           element: "send_code",
         })
 

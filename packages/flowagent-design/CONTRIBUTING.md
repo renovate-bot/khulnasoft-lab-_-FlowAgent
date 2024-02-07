@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for showing interest in contributing to IFLOWAGENT, we think you are the best
+Thanks for showing interest in contributing to FLOWAGENT, we think you are the best
 one!
 
 Here's the table of contents:
@@ -96,7 +96,7 @@ You can find it in "packages/{component name}"
 
 ## Make a Pull Request
 
-If you have some changes, you can make a pull request to let IFLOWAGENT be better!
+If you have some changes, you can make a pull request to let FLOWAGENT be better!
 
 ### Commit Convention
 

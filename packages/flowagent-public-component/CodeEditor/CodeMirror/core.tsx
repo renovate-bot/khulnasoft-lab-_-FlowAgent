@@ -11,12 +11,12 @@ import {
 } from "@codemirror/view"
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useBasicSetup } from "./extensions"
-import { IFLOWAGENTCodeMirrorProps } from "./interface"
+import { FLOWAGENTCodeMirrorProps } from "./interface"
 import { applyEditorWrapperStyle } from "./style"
-import { IFLOWAGENTCodeMirrorTheme } from "./theme"
+import { FLOWAGENTCodeMirrorTheme } from "./theme"
 
 // thk ReactCodeMirror:https://github.com/uiwjs/react-codemirror
-export const IFLOWAGENTCodeMirrorCore: FC<IFLOWAGENTCodeMirrorProps> = (props) => {
+export const FLOWAGENTCodeMirrorCore: FC<FLOWAGENTCodeMirrorProps> = (props) => {
   const {
     className,
     value,
@@ -62,7 +62,7 @@ export const IFLOWAGENTCodeMirrorCore: FC<IFLOWAGENTCodeMirrorProps> = (props) =
           maxWidth,
           minWidth,
         },
-        ...IFLOWAGENTCodeMirrorTheme,
+        ...FLOWAGENTCodeMirrorTheme,
       }),
     [height, maxHeight, maxWidth, minHeight, minWidth, width],
   )

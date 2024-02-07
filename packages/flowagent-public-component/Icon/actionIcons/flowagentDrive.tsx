@@ -1,7 +1,7 @@
 import { createIcon } from "@flowagent-design/react"
 
-const IFLOWAGENTDriveIcon = createIcon({
-  title: "IFLOWAGENTDriveIcon",
+const FLOWAGENTDriveIcon = createIcon({
+  title: "FLOWAGENTDriveIcon",
   viewBox: "0 0 24 24",
   path: (
     <>
@@ -28,5 +28,5 @@ const IFLOWAGENTDriveIcon = createIcon({
   ),
 })
 
-IFLOWAGENTDriveIcon.displayName = "IFLOWAGENTDriveIcon"
-export default IFLOWAGENTDriveIcon
+FLOWAGENTDriveIcon.displayName = "FLOWAGENTDriveIcon"
+export default FLOWAGENTDriveIcon

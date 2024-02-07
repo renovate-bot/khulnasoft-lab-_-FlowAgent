@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { DOC_PREFIX } from "@flowagent-public/public-configs"
@@ -16,7 +16,7 @@ export const MobileUserLayout: FC<LayoutProps> = ({ children }) => {
 
   const handleLinkOpenClick = (link: string) => {
     if (isCloudVersion) {
-      track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+      track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
         element: /privacy/.test(link) ? "privacy" : "terms",
       })
       window.open(DOC_PREFIX + link, "_blank")

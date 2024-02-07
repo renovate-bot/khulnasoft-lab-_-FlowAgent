@@ -1,9 +1,9 @@
 import { MutableRefObject } from "react"
 import { FileToPanel } from "@/components/DriveFileSelect/interface"
-import { IFLOWAGENTFileInfo } from "@/services/drive"
+import { FLOWAGENTFileInfo } from "@/services/drive"
 
 export interface FileListProps {
-  listData: IFLOWAGENTFileInfo[]
+  listData: FLOWAGENTFileInfo[]
   totalPath: string
   search?: MutableRefObject<string>
   selectItems: FileToPanel[]

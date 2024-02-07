@@ -1,7 +1,7 @@
 import { StorageDataShape, Storage_Type } from "./interface"
 
-export default class IFLOWAGENTStorage {
-  prefix: string = "IFLOWAGENT_STORAGE@0.0.1"
+export default class FLOWAGENTStorage {
+  prefix: string = "FLOWAGENT_STORAGE@0.0.1"
   defaultExpire: number = 5
 
   constructor(prefix?: string, defaultExpire?: number) {
@@ -41,7 +41,7 @@ export default class IFLOWAGENTStorage {
       const stringifyData = JSON.stringify(data)
       window[type].setItem(this.autoAddPrefix(key), stringifyData)
     } catch (e) {
-      console.error(`[IFLOWAGENT_STORAGE] setStorage error: ${e}`)
+      console.error(`[FLOWAGENT_STORAGE] setStorage error: ${e}`)
     }
   }
 
@@ -59,7 +59,7 @@ export default class IFLOWAGENTStorage {
       }
       storage = JSON.parse(stringifyData)
     } catch (e) {
-      console.error(`[IFLOWAGENT_STORAGE] getStorage error: ${e}`)
+      console.error(`[FLOWAGENT_STORAGE] getStorage error: ${e}`)
       return undefined
     }
 

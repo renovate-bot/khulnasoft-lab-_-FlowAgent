@@ -1,12 +1,12 @@
 import { UpgradeIcon } from "@flowagent-public/icon"
-import { IFLOWAGENT_MIXPANEL_EVENT_TYPE } from "@flowagent-public/mixpanel-utils"
+import { FLOWAGENT_MIXPANEL_EVENT_TYPE } from "@flowagent-public/mixpanel-utils"
 import {
   SUBSCRIBE_PLAN,
   SUBSCRIPTION_CYCLE,
   USER_ROLE,
 } from "@flowagent-public/public-types"
 import { getCurrentTeamInfo, getCurrentUserID } from "@flowagent-public/user-data"
-import { getIFLOWAGENTCloudURL } from "@flowagent-public/utils"
+import { getFLOWAGENTCloudURL } from "@flowagent-public/utils"
 import { FC, useCallback, useEffect, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
@@ -69,7 +69,7 @@ export const SubscriptionReminderModal: FC<UpgradeModalProps> = (props) => {
 
   const billingUrl = useMemo(() => {
     if (!teamInfo?.identifier) return ""
-    return `${getIFLOWAGENTCloudURL()}/setting/${teamInfo?.identifier}/billing`
+    return `${getFLOWAGENTCloudURL()}/setting/${teamInfo?.identifier}/billing`
   }, [teamInfo?.identifier])
 
   const openDrawer = useCallback(() => {
@@ -97,7 +97,7 @@ export const SubscriptionReminderModal: FC<UpgradeModalProps> = (props) => {
       visible &&
       from &&
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         { element: reportElement, parameter1: from },
         USER_ROLE[teamInfo?.myRole],
         teamInfo?.id,

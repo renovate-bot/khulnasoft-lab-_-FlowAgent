@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { ResourceContent } from "@flowagent-public/public-types"
@@ -22,7 +22,7 @@ export const TestConnectButton: FC<TestConnectButtonProps> = (props) => {
   const currentTeamID = useSelector(getCurrentId)!
 
   const handleConnectionTest = useCallback(async () => {
-    track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+    track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "resource_configure_test",
       parameter5: resourceType,
     })

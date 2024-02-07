@@ -49,7 +49,7 @@ const GoogleSheetsConfigElement: FC<BaseConfigElementProps> = (props) => {
   )
 
   const oauthMethodOptions = useMemo(() => {
-    if (import.meta.env.IFLOWAGENT_APP_ENV === "production") {
+    if (import.meta.env.FLOWAGENT_APP_ENV === "production") {
       return [
         {
           label: t("editor.action.form.option.gs.service_account"),

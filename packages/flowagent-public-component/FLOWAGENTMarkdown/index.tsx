@@ -2,10 +2,10 @@ import { FC } from "react"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 import { Link, getColor } from "@flowagent-design/react"
-import { IFLOWAGENTMarkdownProps } from "./interface"
+import { FLOWAGENTMarkdownProps } from "./interface"
 import { applyMarkdownPStyle } from "./style"
 
-export const IFLOWAGENTMarkdown: FC<IFLOWAGENTMarkdownProps> = (props) => {
+export const FLOWAGENTMarkdown: FC<FLOWAGENTMarkdownProps> = (props) => {
   const {
     textString,
     textColor = getColor("white", "01"),
@@ -30,4 +30,4 @@ export const IFLOWAGENTMarkdown: FC<IFLOWAGENTMarkdownProps> = (props) => {
   )
 }
 
-IFLOWAGENTMarkdown.displayName = "IFLOWAGENTMarkdown"
+FLOWAGENTMarkdown.displayName = "FLOWAGENTMarkdown"

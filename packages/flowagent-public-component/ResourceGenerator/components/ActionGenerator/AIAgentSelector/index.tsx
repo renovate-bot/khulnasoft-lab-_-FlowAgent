@@ -1,6 +1,6 @@
 import { MARKET_AGENT_SORTED_OPTIONS } from "@flowagent-public/market-agent"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { Agent } from "@flowagent-public/public-types"
@@ -82,7 +82,7 @@ export const AIAgentSelector: FC<ActionResourceSelectorProps> = (props) => {
       if (loading) return
       handleCreateAction(agentItem, () => onCreateAction?.(), setLoading)
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
         {
           element: "resource_list_create_action",
           parameter1: actionType,
@@ -95,7 +95,7 @@ export const AIAgentSelector: FC<ActionResourceSelectorProps> = (props) => {
 
   useEffect(() => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
       {
         element: "resource_list_show",
         parameter1: actionType,

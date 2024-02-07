@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { ResourceType } from "@flowagent-public/public-types"
@@ -36,7 +36,7 @@ export const ResourceGenerator: FC<ResourceGeneratorProps> = (props) => {
       currentStep === "createResource"
         ? "resource_configure_close"
         : "resource_type_modal_close"
-    track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, { element })
+    track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, { element })
     onClose()
     setCurrentStep("select")
     setCurrentResource(null)
@@ -51,7 +51,7 @@ export const ResourceGenerator: FC<ResourceGeneratorProps> = (props) => {
           ? "resource_configure_modal"
           : "resource_type_modal"
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element,
           parameter5: currentResource,
@@ -87,7 +87,7 @@ export const ResourceGenerator: FC<ResourceGeneratorProps> = (props) => {
             onSelect={(resourceType) => {
               setCurrentStep("createResource")
               setCurrentResource(resourceType)
-              track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+              track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
                 element: "resource_type_modal_resource",
                 parameter5: resourceType,
               })
@@ -101,7 +101,7 @@ export const ResourceGenerator: FC<ResourceGeneratorProps> = (props) => {
               if (defaultConfig?.canBack ?? true) {
                 setCurrentStep("select")
                 setCurrentResource(null)
-                track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+                track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
                   element: "resource_configure_back",
                   parameter5: currentResource,
                 })

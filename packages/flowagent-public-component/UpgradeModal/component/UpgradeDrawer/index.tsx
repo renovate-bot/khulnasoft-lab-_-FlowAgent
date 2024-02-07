@@ -1,4 +1,4 @@
-import { IFLOWAGENT_MIXPANEL_EVENT_TYPE } from "@flowagent-public/mixpanel-utils"
+import { FLOWAGENT_MIXPANEL_EVENT_TYPE } from "@flowagent-public/mixpanel-utils"
 import {
   SUBSCRIBE_PLAN,
   SUBSCRIPTION_CYCLE,
@@ -170,7 +170,7 @@ export const UpgradeDrawer: FC<UpgradeDrawerProps> = (props) => {
     if (loading || !teamID) return
     setLoading(true)
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "billing_side_bar_upgrade_or_manage_button",
         parameter1: from,
@@ -246,7 +246,7 @@ export const UpgradeDrawer: FC<UpgradeDrawerProps> = (props) => {
     visible &&
       from &&
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "billing_side_bar",
           parameter1: from,

@@ -5,7 +5,7 @@ import {
   errorHighlightClassName,
 } from "./extensions/heighLightJSExpression"
 
-export const IFLOWAGENTCodeMirrorTheme = {
+export const FLOWAGENTCodeMirrorTheme = {
   "&.cm-editor": {
     borderRadius: "8px",
     border: `1px solid ${getColor("grayBlue", "03")}`,

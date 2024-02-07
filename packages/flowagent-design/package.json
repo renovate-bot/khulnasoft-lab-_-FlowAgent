@@ -3,7 +3,7 @@
   "private": true,
   "description": "flowagent UI Component",
   "repository": "git@github.com:khulnasoft-lab/flowagent.git",
-  "author": "IFLOWAGENT Cloud <opensource@flowagentsoft.com>",
+  "author": "FLOWAGENT Cloud <opensource@flowagentsoft.com>",
   "license": "Apache-2.0",
   "resolutions": {
     "graceful-fs": "4.2.11"

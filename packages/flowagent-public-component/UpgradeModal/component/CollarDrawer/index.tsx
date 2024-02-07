@@ -1,4 +1,4 @@
-import { IFLOWAGENT_MIXPANEL_EVENT_TYPE } from "@flowagent-public/mixpanel-utils"
+import { FLOWAGENT_MIXPANEL_EVENT_TYPE } from "@flowagent-public/mixpanel-utils"
 import {
   SUBSCRIBE_PLAN,
   SUBSCRIPTION_CYCLE,
@@ -164,7 +164,7 @@ export const CollarDrawer: FC<CollarDrawerProps> = (props) => {
     if (loading || !currentTeamInfo || !currentTeamInfo?.id) return
     setLoading(true)
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "billing_side_bar_upgrade_or_manage_button",
         parameter1: from,
@@ -262,7 +262,7 @@ export const CollarDrawer: FC<CollarDrawerProps> = (props) => {
     from &&
       visible &&
       track?.(
-        IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+        FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
         {
           element: "billing_side_bar",
           parameter1: from,

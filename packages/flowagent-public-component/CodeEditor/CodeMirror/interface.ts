@@ -1,6 +1,6 @@
 import { ICodeMirrorOptions } from "./extensions/interface"
 
-export interface IFLOWAGENTCodeMirrorProps extends ICodeMirrorOptions {
+export interface FLOWAGENTCodeMirrorProps extends ICodeMirrorOptions {
   value?: string
   onChange?: (value: string) => void
   onFocus?: () => void

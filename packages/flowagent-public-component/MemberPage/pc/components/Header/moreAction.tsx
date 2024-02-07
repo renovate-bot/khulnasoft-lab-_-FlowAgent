@@ -1,7 +1,7 @@
 import { AuthShown, SHOW_RULES } from "@flowagent-public/auth-shown"
-import { ERROR_FLAG, isIFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
+import { ERROR_FLAG, isFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { USER_ROLE } from "@flowagent-public/public-types"
@@ -56,7 +56,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
 
   const handleClickDeleteOrLeaveTeam = useCallback(() => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "leave",
       },
@@ -73,7 +73,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
       },
       afterOpen: () => {
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
           {
             element: "leave_modal",
           },
@@ -82,7 +82,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
       },
       onOk: async () => {
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "leave_modal_leave",
           },
@@ -94,7 +94,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
             content: t("team_setting.mes.leave_suc"),
           })
           track?.(
-            IFLOWAGENT_MIXPANEL_EVENT_TYPE.REQUEST,
+            FLOWAGENT_MIXPANEL_EVENT_TYPE.REQUEST,
             {
               element: "delete",
               parameter1: "delete_select",
@@ -103,7 +103,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
           )
           afterLeaveTeam?.()
         } catch (e) {
-          if (isIFLOWAGENTAPiError(e)) {
+          if (isFLOWAGENTAPiError(e)) {
             switch (e.data.errorFlag) {
               case ERROR_FLAG.ERROR_FLAG_CAN_NOT_REMOVE_TEAM_MEMBER_BECAUSE_APPSUMO_BUYER:
                 message.error({
@@ -124,7 +124,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
       },
       onCancel: () => {
         track?.(
-          IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+          FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
           {
             element: "leave_modal_cancel",
           },
@@ -144,7 +144,7 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
 
   const handleChangeInviteByEditor = async (value: boolean) => {
     track?.(
-      IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
+      FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK,
       {
         element: "allow_manage",
         parameter2: value ? "on" : "off",
@@ -203,14 +203,14 @@ export const MoreAction: FC<IPcMoreActionProps> = (props) => {
         onVisibleChange={(show: boolean) => {
           if (show) {
             track?.(
-              IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+              FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
               {
                 element: "more",
               },
               "both",
             )
             track?.(
-              IFLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
+              FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW,
               {
                 element: "allow_manage",
                 parameter2:

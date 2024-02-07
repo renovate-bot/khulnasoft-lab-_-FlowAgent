@@ -1,5 +1,5 @@
 import {
-  IFLOWAGENT_MIXPANEL_EVENT_TYPE,
+  FLOWAGENT_MIXPANEL_EVENT_TYPE,
   MixpanelTrackContext,
 } from "@flowagent-public/mixpanel-utils"
 import { FC, useContext, useState } from "react"
@@ -38,7 +38,7 @@ export const ShareAgentMobile: FC<ShareAgentProps> = (props) => {
   const { track } = useContext(MixpanelTrackContext)
 
   const handleTabChange = (activeKey: string) => {
-    track?.(IFLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
+    track?.(FLOWAGENT_MIXPANEL_EVENT_TYPE.CLICK, {
       element: "share_modal_tab",
       parameter2: activeKey,
       parameter5: props.agentID,
