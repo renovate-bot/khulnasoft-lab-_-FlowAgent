@@ -43,7 +43,7 @@
     "@flowagent-design/icon": "workspace:*",
     "@flowagent-design/system": "workspace:*",
     "@flowagent-design/theme": "workspace:*",
-    "framer-motion": "^10.16.4"
+    "framer-motion": "^11.0.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",

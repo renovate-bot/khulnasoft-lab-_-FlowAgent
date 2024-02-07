@@ -44,7 +44,7 @@
     "@flowagent-design/system": "workspace:*",
     "react-use-measure": "^2.1.1",
     "react-use": "^17.4.0",
-    "framer-motion": "^10.16.4"
+    "framer-motion": "^11.0.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",

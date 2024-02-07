@@ -44,7 +44,7 @@
     "@flowagent-design/system": "workspace:*",
     "@flowagent-design/theme": "workspace:*",
     "uuid": "^8.3.2",
-    "framer-motion": "^10.16.4"
+    "framer-motion": "^11.0.0"
   },
   "devDependencies": {
     "@types/uuid": "^8.3.4"

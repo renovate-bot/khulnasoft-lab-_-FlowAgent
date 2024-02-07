@@ -47,7 +47,7 @@
     "@flowagent-design/theme": "workspace:*",
     "react-remove-scroll": "^2.5.4",
     "react-focus-lock": "^2.8.1",
-    "framer-motion": "^10.16.4"
+    "framer-motion": "^11.0.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",

@@ -16,7 +16,7 @@
     "@flowagent-public/user-data": "workspace:*",
     "@flowagent-public/user-role-utils": "workspace:*",
     "@flowagent-public/utils": "workspace:*",
-    "framer-motion": "^10.16.16",
+    "framer-motion": "^11.0.0",
     "react-hook-form": "^7.40.0"
   },
   "devDependencies": {

@@ -45,7 +45,7 @@
     "@flowagent-design/system": "workspace:*",
     "@flowagent-design/skeleton": "workspace:*",
     "dayjs": "^1.11.7",
-    "framer-motion": "^10.16.4"
+    "framer-motion": "^11.0.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
