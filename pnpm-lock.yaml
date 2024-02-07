@@ -301,8 +301,8 @@ importers:
         specifier: ^1.6.2
         version: 1.6.7
       chart.js:
-        specifier: ^3.9.1
-        version: 3.9.1
+        specifier: ^4.0.0
+        version: 4.4.1
       chroma-js:
         specifier: ^2.4.2
         version: 2.4.2
@@ -374,7 +374,7 @@ importers:
         version: 1.8.7(react-dom@18.2.0)(react@18.2.0)
       react-chartjs-2:
         specifier: ^4.3.1
-        version: 4.3.1(chart.js@3.9.1)(react@18.2.0)
+        version: 4.3.1(chart.js@4.4.1)(react@18.2.0)
       react-code-blocks:
         specifier: ^0.1.4
         version: 0.1.6(react-dom@18.2.0)(react@18.2.0)
@@ -5795,6 +5795,10 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
+  /@kurkle/color@0.3.2:
+    resolution: {integrity: sha512-fuscdXJ9G1qb7W8VdHi+IwRqij3lBkosAm4ydQtEmbY58OzHXqQhvlxqEkoz0yssNVn38bcpRWgA9PP+OGoisw==}
+    dev: false
+
   /@lezer/common@1.2.1:
     resolution: {integrity: sha512-yemX0ZD2xS/73llMZIK6KplkjIjf2EvAHcinDi/TfJ9hS25G0388+ClHt6/3but0oOxinTcQHJLDXh6w1crzFQ==}
     dev: false
@@ -8642,8 +8646,11 @@ packages:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
     dev: true
 
-  /chart.js@3.9.1:
-    resolution: {integrity: sha512-Ro2JbLmvg83gXF5F4sniaQ+lTbSv18E+TIf2cOeiH1Iqd2PGFOtem+DUufMZsCJwFE7ywPOpfXFBwRTGq7dh6w==}
+  /chart.js@4.4.1:
+    resolution: {integrity: sha512-C74QN1bxwV1v2PEujhmKjOZ7iUM4w6BWs23Md/6aOZZSlwMzeCIDGuZay++rBgChYru7/+QFeoQW0fQoP534Dg==}
+    engines: {pnpm: '>=7'}
+    dependencies:
+      '@kurkle/color': 0.3.2
     dev: false
 
   /chokidar@3.5.3:
@@ -14176,13 +14183,13 @@ packages:
       uncontrollable: 7.2.1(react@18.2.0)
     dev: false
 
-  /react-chartjs-2@4.3.1(chart.js@3.9.1)(react@18.2.0):
+  /react-chartjs-2@4.3.1(chart.js@4.4.1)(react@18.2.0):
     resolution: {integrity: sha512-5i3mjP6tU7QSn0jvb8I4hudTzHJqS8l00ORJnVwI2sYu0ihpj83Lv2YzfxunfxTZkscKvZu2F2w9LkwNBhj6xA==}
     peerDependencies:
       chart.js: ^3.5.0
       react: ^18.2.0
     dependencies:
-      chart.js: 3.9.1
+      chart.js: 4.4.1
       react: 18.2.0
     dev: false
 
