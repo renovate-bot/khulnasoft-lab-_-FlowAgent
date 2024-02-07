@@ -1,4 +1,7 @@
-import { ComponentMapNode, ComponentTreeNode } from "@flowagent-public/public-types"
+import {
+  ComponentMapNode,
+  ComponentTreeNode,
+} from "@flowagent-public/public-types"
 import { getComponentMap } from "@/redux/currentApp/components/componentsSelector"
 import store from "@/store"
 

@@ -1,4 +1,7 @@
-import { CONTAINER_TYPE, ComponentTreeNode } from "@flowagent-public/public-types"
+import {
+  CONTAINER_TYPE,
+  ComponentTreeNode,
+} from "@flowagent-public/public-types"
 
 export const TIP_NODES: ComponentTreeNode = {
   version: 0,

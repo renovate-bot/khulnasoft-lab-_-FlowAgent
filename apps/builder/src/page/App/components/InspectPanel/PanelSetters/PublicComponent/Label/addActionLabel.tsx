@@ -1,6 +1,11 @@
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
-import { AddIcon, Button, globalColor, flowagentPrefix } from "@flowagent-design/react"
+import {
+  AddIcon,
+  Button,
+  flowagentPrefix,
+  globalColor,
+} from "@flowagent-design/react"
 import { AddActionLabelProps } from "@/page/App/components/InspectPanel/PanelSetters/PublicComponent/Label/interface"
 import { headerWrapperStyle } from "@/page/App/components/InspectPanel/PanelSetters/PublicComponent/Label/style"
 import { PanelLabel } from "@/page/App/components/InspectPanel/components/Label"

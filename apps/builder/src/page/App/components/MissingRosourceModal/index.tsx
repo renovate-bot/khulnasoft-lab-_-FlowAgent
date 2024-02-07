@@ -5,7 +5,11 @@ import {
   FLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME,
   MixpanelTrackProvider,
 } from "@flowagent-public/mixpanel-utils"
-import { ActionContent, ActionItem, Resource } from "@flowagent-public/public-types"
+import {
+  ActionContent,
+  ActionItem,
+  Resource,
+} from "@flowagent-public/public-types"
 import { FC, memo } from "react"
 import { createPortal } from "react-dom"
 import { useDispatch, useSelector } from "react-redux"

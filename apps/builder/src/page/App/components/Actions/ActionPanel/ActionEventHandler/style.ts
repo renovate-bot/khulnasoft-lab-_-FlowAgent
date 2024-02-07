@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, globalColor } from "@flowagent-design/react"
 
 export const actionEventHandlerStyle = css`
   border-top: 1px solid ${globalColor(`--${flowagentPrefix}-grayBlue-08`)};

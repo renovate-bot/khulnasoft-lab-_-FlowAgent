@@ -6,7 +6,9 @@ import { InputEditor } from "@/page/App/components/Actions/InputEditor"
 import { VALIDATION_TYPES } from "@/utils/validationFactory"
 import { FLOWAGENTDriveActionPartProps } from "../interface"
 
-export const DeleteMultiplePart: FC<FLOWAGENTDriveActionPartProps> = (props) => {
+export const DeleteMultiplePart: FC<FLOWAGENTDriveActionPartProps> = (
+  props,
+) => {
   const { t } = useTranslation()
   const commandArgs = props.commandArgs as FLOWAGENTDriveDeleteMultipleContent
   const { handleOptionsValueChange } = props

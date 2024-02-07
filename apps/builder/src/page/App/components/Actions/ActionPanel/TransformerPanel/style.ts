@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, globalColor } from "@flowagent-design/react"
 
 export const transformerPanelContainerStyle = css`
   display: flex;

@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor, globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, getColor, globalColor } from "@flowagent-design/react"
 
 export const searchHeaderContainerStyle = css`
   width: 255px;

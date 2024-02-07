@@ -76,7 +76,10 @@ export function getDataInfo(data: Record<string, unknown>, path: string) {
           if (!currentData || !isObject(currentData)) {
             return null
           }
-          descInfos = FLOWAGENTContextDesc[currentPath] as Record<string, unknown>
+          descInfos = FLOWAGENTContextDesc[currentPath] as Record<
+            string,
+            unknown
+          >
         }
         offset = i + 1
         if (path[i] === "." && Array.isArray(currentData)) {

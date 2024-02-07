@@ -2,7 +2,9 @@ import { test } from "@playwright/test"
 
 test.describe("PostgreSQL create And delete", () => {
   test.beforeEach("Show create Modal", async ({ page }) => {
-    await page.goto(`/${process.env.FLOWAGENT_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
+    await page.goto(
+      `/${process.env.FLOWAGENT_CLOUD_TEAM_IDENTITY}/dashboard/apps`,
+    )
     await page.getByText("Resources").click()
     await page.getByRole("button", { name: "Create New" }).click()
   })
@@ -15,7 +17,9 @@ test.describe("PostgreSQL create And delete", () => {
     await page
       .getByPlaceholder("Hostname")
       .fill(process.env.FLOWAGENT_POSTGRESQL_HOST!)
-    await page.getByPlaceholder("5432").fill(process.env.FLOWAGENT_POSTGRESQL_PORT)
+    await page
+      .getByPlaceholder("5432")
+      .fill(process.env.FLOWAGENT_POSTGRESQL_PORT)
     await page
       .getByPlaceholder("acme_production")
       .fill(process.env.FLOWAGENT_POSTGRESQL_DATABASENAME)

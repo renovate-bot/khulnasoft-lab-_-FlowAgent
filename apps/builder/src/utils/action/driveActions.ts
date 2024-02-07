@@ -134,7 +134,9 @@ export const transformDriveData = (
       const commandArgs = contents.commandArgs as FLOWAGENTDriveListAllContent
       return {
         operation,
-        path: `/${removeSuffixPath(commandArgs.path) || FLOWAGENT_DRIVE_ROOT_PATH}`,
+        path: `/${
+          removeSuffixPath(commandArgs.path) || FLOWAGENT_DRIVE_ROOT_PATH
+        }`,
         limit: commandArgs.limit,
         search:
           commandArgs.filterType === FLOWAGENT_DRIVE_FILTER_TYPE.BY_NAME
@@ -162,7 +164,9 @@ export const transformDriveData = (
       )
       return {
         operation,
-        path: `/${removeSuffixPath(commandArgs.path) || FLOWAGENT_DRIVE_ROOT_PATH}`,
+        path: `/${
+          removeSuffixPath(commandArgs.path) || FLOWAGENT_DRIVE_ROOT_PATH
+        }`,
         overwriteDuplicate: commandArgs.overwriteDuplicate,
         fileName: fileDownloadName,
         fileSize: needUploadFile.size,
@@ -172,7 +176,8 @@ export const transformDriveData = (
     }
 
     case FLOWAGENT_DRIVE_ACTION_REQUEST_TYPE.UPLOAD_MULTIPLE:
-      const commandArgs = contents.commandArgs as FLOWAGENTDriveUploadMultipleContent
+      const commandArgs =
+        contents.commandArgs as FLOWAGENTDriveUploadMultipleContent
       const files: Record<string, string | number | File>[] = []
       let minLength = Math.min(
         commandArgs.fileDataArray.length,
@@ -184,7 +189,9 @@ export const transformDriveData = (
         let fileType = commandArgs.fileTypeArray[
           i
         ] as FLOWAGENT_DRIVE_UPLOAD_FILE_TYPE
-        if (!Object.values(FLOWAGENT_DRIVE_UPLOAD_FILE_TYPE).includes(fileType)) {
+        if (
+          !Object.values(FLOWAGENT_DRIVE_UPLOAD_FILE_TYPE).includes(fileType)
+        ) {
           fileType = FLOWAGENT_DRIVE_UPLOAD_FILE_TYPE.AUTO
         }
         const { fileDownloadName, needUploadFile } = getFileInfo(
@@ -202,7 +209,9 @@ export const transformDriveData = (
 
       return {
         operation,
-        path: `/${removeSuffixPath(commandArgs.path) || FLOWAGENT_DRIVE_ROOT_PATH}`,
+        path: `/${
+          removeSuffixPath(commandArgs.path) || FLOWAGENT_DRIVE_ROOT_PATH
+        }`,
         overwriteDuplicate: commandArgs.overwriteDuplicate,
         files,
       }
@@ -237,7 +246,9 @@ export const fetchFLOWAGENTDriveClientResult = async (
 ) => {
   try {
     const { operation } = actionContent || {}
-    if (!Object.values(FLOWAGENT_DRIVE_ACTION_REQUEST_TYPE).includes(operation)) {
+    if (
+      !Object.values(FLOWAGENT_DRIVE_ACTION_REQUEST_TYPE).includes(operation)
+    ) {
       return Promise.reject("no method")
     }
     let result = response

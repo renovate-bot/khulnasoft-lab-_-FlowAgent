@@ -111,9 +111,12 @@ export const setRouter = (params: { pagePath: string; viewPath?: string }) => {
   if (isProductionMode) {
     let finalPath = `/${pagePath}`
     finalPath = viewPath ? finalPath + `/${viewPath}` : finalPath
-    FLOWAGENTRoute.navigate(`/${teamIdentifier}/deploy/app/${appId}${finalPath}`, {
-      replace: true,
-    })
+    FLOWAGENTRoute.navigate(
+      `/${teamIdentifier}/deploy/app/${appId}${finalPath}`,
+      {
+        replace: true,
+      },
+    )
   }
   const updateSlice: UpdateExecutionByDisplayNamePayload[] = [
     {

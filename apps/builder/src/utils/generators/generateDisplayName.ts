@@ -1,5 +1,8 @@
 // string for component
-import { ActionContent, ComponentTreeNode } from "@flowagent-public/public-types"
+import {
+  ActionContent,
+  ComponentTreeNode,
+} from "@flowagent-public/public-types"
 import { ActionItem } from "@flowagent-public/public-types"
 import { Connection, getTextMessagePayload } from "@/api/ws"
 import { TextSignal, TextTarget } from "@/api/ws/textSignal"

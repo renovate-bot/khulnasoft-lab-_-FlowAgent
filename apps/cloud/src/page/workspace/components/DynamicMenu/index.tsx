@@ -1,4 +1,7 @@
-import { DynamicMenu, MenuItemShape } from "@flowagent-public/cloud-dashboard-layout"
+import {
+  DynamicMenu,
+  MenuItemShape,
+} from "@flowagent-public/cloud-dashboard-layout"
 import { USER_ROLE } from "@flowagent-public/public-types"
 import { getCurrentTeamInfo } from "@flowagent-public/user-data"
 import { FC } from "react"

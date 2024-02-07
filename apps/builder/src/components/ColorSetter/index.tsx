@@ -1,7 +1,11 @@
 import { hexToHsva } from "@uiw/color-convert"
 import { debounce } from "lodash-es"
 import { FC, useRef } from "react"
-import { BindIcon, Trigger, getSpecialThemeColor } from "@flowagent-design/react"
+import {
+  BindIcon,
+  Trigger,
+  getSpecialThemeColor,
+} from "@flowagent-design/react"
 import { ColorPicker } from "@/components/ColorPicker"
 import {
   colorSchemes,

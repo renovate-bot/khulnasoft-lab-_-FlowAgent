@@ -17,7 +17,13 @@ import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { mutate } from "swr"
-import { Button, Divider, Modal, PlusIcon, Search } from "@flowagent-design/react"
+import {
+  Button,
+  Divider,
+  Modal,
+  PlusIcon,
+  Search,
+} from "@flowagent-design/react"
 import { FullSectionLoading } from "@/components/FullSectionLoading"
 import { DashboardHeader } from "@/page/workspace/components/Header"
 import { useSearch } from "@/page/workspace/hooks"

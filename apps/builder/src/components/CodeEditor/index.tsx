@@ -241,7 +241,10 @@ export const CodeEditor: FC<CodeEditorProps> = (props) => {
   }, [])
 
   return (
-    <div css={[FLOWAGENTCodeMirrorWrapperStyle, wrapperCss]} ref={popupContainerRef}>
+    <div
+      css={[FLOWAGENTCodeMirrorWrapperStyle, wrapperCss]}
+      ref={popupContainerRef}
+    >
       <FLOWAGENTCodeMirrorCore
         className={className}
         showLineNumbers={showLineNumbers}

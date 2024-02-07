@@ -6,8 +6,8 @@ import {
   DragPointIcon,
   Trigger,
   WarningCircleIcon,
-  globalColor,
   flowagentPrefix,
+  globalColor,
 } from "@flowagent-design/react"
 import { ViewListSetterContext } from "@/page/App/components/InspectPanel/PanelSetters/ContainerSetter/ViewsSetter/context/viewsListContext"
 import {

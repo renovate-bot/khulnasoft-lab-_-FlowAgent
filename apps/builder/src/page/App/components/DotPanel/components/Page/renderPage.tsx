@@ -143,8 +143,8 @@ export const RenderPage: FC<RenderPageProps> = (props) => {
       ? isLeftFold
         ? 40
         : leftWidthPX <= LEFT_MIN_WIDTH
-        ? LEFT_MIN_WIDTH
-        : leftWidthPX
+          ? LEFT_MIN_WIDTH
+          : leftWidthPX
       : 0
   }, [bounds.width, canvasSize, hasLeft, isLeftFold, leftWidth])
 
@@ -158,8 +158,8 @@ export const RenderPage: FC<RenderPageProps> = (props) => {
       ? isRightFold
         ? 40
         : rightWidthPX <= RIGHT_MIN_WIDTH
-        ? RIGHT_MIN_WIDTH
-        : rightWidthPX
+          ? RIGHT_MIN_WIDTH
+          : rightWidthPX
       : 0
   }, [bounds.width, canvasSize, hasRight, isRightFold, rightWidth])
 

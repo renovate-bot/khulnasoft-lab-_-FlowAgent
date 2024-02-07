@@ -2,7 +2,9 @@ import { test } from "@playwright/test"
 
 test.describe("Redis create And delete", () => {
   test.beforeEach("Show create Modal", async ({ page }) => {
-    await page.goto(`/${process.env.FLOWAGENT_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
+    await page.goto(
+      `/${process.env.FLOWAGENT_CLOUD_TEAM_IDENTITY}/dashboard/apps`,
+    )
     await page.getByText("Resources").click()
     await page.getByRole("button", { name: "Create New" }).click()
   })
@@ -16,7 +18,9 @@ test.describe("Redis create And delete", () => {
       .getByPlaceholder('i.e."Users DB(readonly)" or "Internal Admin API"')
       .fill("test")
     await page.getByPlaceholder("Hostname").click()
-    await page.getByPlaceholder("Hostname").fill(process.env.FLOWAGENT_REDIS_HOST)
+    await page
+      .getByPlaceholder("Hostname")
+      .fill(process.env.FLOWAGENT_REDIS_HOST)
     await page.getByPlaceholder("6379").click()
     await page.getByPlaceholder("6379").fill(process.env.FLOWAGENT_REDIS_PORT)
     await page.getByPlaceholder("Username").click()

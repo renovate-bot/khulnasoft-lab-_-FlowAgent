@@ -1,9 +1,9 @@
 import { css } from "@emotion/react"
 import {
+  flowagentPrefix,
   getColor,
   getSpecialThemeColor,
   globalColor,
-  flowagentPrefix,
 } from "@flowagent-design/react"
 
 const overflowStyle = css`

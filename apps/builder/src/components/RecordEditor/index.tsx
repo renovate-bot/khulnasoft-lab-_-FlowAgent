@@ -5,8 +5,8 @@ import {
   Button,
   DeleteIcon,
   Input,
-  globalColor,
   flowagentPrefix,
+  globalColor,
 } from "@flowagent-design/react"
 import { CodeEditor } from "@/components/CodeEditor"
 import { CODE_LANG } from "@/components/CodeEditor/CodeMirror/extensions/interface"
@@ -193,7 +193,9 @@ export const RecordEditor: FC<RecordEditorProps> = (props) => {
                 onAdd?.(name)
               }}
               leftIcon={
-                <AddIcon color={globalColor(`--${flowagentPrefix}-techPurple-03`)} />
+                <AddIcon
+                  color={globalColor(`--${flowagentPrefix}-techPurple-03`)}
+                />
               }
             >
               {t("editor.action.panel.btn.new")}

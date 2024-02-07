@@ -65,8 +65,14 @@ export const MultiSelectCanvas: FC<MultiSelectCanvasProps> = (props) => {
     let currentCanvasStyle: CSSStyleDeclaration | undefined =
       scrollContainerRef.current?.style
     selectStartPositionRef.current = [startX, startY]
-    currentCanvasStyle?.setProperty("--flowagent-select-area-left", `${startX}px`)
-    currentCanvasStyle?.setProperty("--flowagent-select-area-top", `${startY}px`)
+    currentCanvasStyle?.setProperty(
+      "--flowagent-select-area-left",
+      `${startX}px`,
+    )
+    currentCanvasStyle?.setProperty(
+      "--flowagent-select-area-top",
+      `${startY}px`,
+    )
     prevSelectedComponent.current = selectedComponents
   }
 

@@ -2,7 +2,9 @@ import { test } from "@playwright/test"
 
 test.describe("SMTP create And delete", () => {
   test.beforeEach("Show create Modal", async ({ page }) => {
-    await page.goto(`/${process.env.FLOWAGENT_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
+    await page.goto(
+      `/${process.env.FLOWAGENT_CLOUD_TEAM_IDENTITY}/dashboard/apps`,
+    )
     await page.getByText("Resources").click()
     await page.getByRole("button", { name: "Create New" }).click()
   })
@@ -16,11 +18,17 @@ test.describe("SMTP create And delete", () => {
       .getByPlaceholder('i.e."Users DB(readonly)" or "Internal Admin API"')
       .fill("test")
     await page.getByPlaceholder("Hostname").click()
-    await page.getByPlaceholder("Hostname").fill(process.env.FLOWAGENT_SMTP_HOST)
+    await page
+      .getByPlaceholder("Hostname")
+      .fill(process.env.FLOWAGENT_SMTP_HOST)
     await page.getByPlaceholder("Username").click()
-    await page.getByPlaceholder("Username").fill(process.env.FLOWAGENT_SMTP_USERNAME)
+    await page
+      .getByPlaceholder("Username")
+      .fill(process.env.FLOWAGENT_SMTP_USERNAME)
     await page.getByPlaceholder("Password").click()
-    await page.getByPlaceholder("Password").fill(process.env.FLOWAGENT_SMTP_PASSWORD)
+    await page
+      .getByPlaceholder("Password")
+      .fill(process.env.FLOWAGENT_SMTP_PASSWORD)
     await page.getByPlaceholder("25").click()
     await page.getByPlaceholder("25").fill(process.env.FLOWAGENT_SMTP_PORT)
     await page.getByText("PreviousIconBackTest ConnectionSave Resource").click()

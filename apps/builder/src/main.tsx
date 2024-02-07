@@ -1,5 +1,9 @@
 import { FLOWAGENTMixpanel } from "@flowagent-public/mixpanel-utils"
-import { initDateReport, initDayjs, isCloudVersion } from "@flowagent-public/utils"
+import {
+  initDateReport,
+  initDayjs,
+  isCloudVersion,
+} from "@flowagent-public/utils"
 import { LicenseInfo } from "@mui/x-data-grid-premium"
 import * as Sentry from "@sentry/react"
 import { StrictMode } from "react"

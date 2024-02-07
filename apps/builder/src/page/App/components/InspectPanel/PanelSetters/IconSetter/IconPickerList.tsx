@@ -23,8 +23,10 @@ const IconPickerList: FC<IconPickerListProps> = (props) => {
     iconType === "All"
       ? iconsInfo
       : iconType === "Filled"
-      ? iconsInfo.filter((icon) => icon.name.toLowerCase().includes("fill"))
-      : iconsInfo.filter((icon) => icon.name.toLowerCase().includes("outline"))
+        ? iconsInfo.filter((icon) => icon.name.toLowerCase().includes("fill"))
+        : iconsInfo.filter((icon) =>
+            icon.name.toLowerCase().includes("outline"),
+          )
 
   const filteredIconsInfoSet = !searchInput
     ? originAndTypeFilter

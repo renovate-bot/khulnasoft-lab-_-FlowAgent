@@ -29,9 +29,8 @@ export const getCrossingWidget = (
   mainNode: NodeShape,
   draggedDisplayNames: string[],
 ) => {
-  const widgetLayoutArray = flowagentSnapshot.getSnapShotArrayByParentDisplayName(
-    parentNodeDisplayName,
-  )
+  const widgetLayoutArray =
+    flowagentSnapshot.getSnapShotArrayByParentDisplayName(parentNodeDisplayName)
   const filteredWidgetLayoutArray = widgetLayoutArray.filter((item) => {
     return !draggedDisplayNames.includes(item.displayName)
   })

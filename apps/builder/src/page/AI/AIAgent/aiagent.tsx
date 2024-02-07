@@ -1162,7 +1162,9 @@ export const AIAgent: FC = () => {
                   >
                     <MixpanelTrackProvider
                       basicTrack={track}
-                      pageName={FLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT}
+                      pageName={
+                        FLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT
+                      }
                     >
                       <AvatarUpload
                         onOk={async (file) => {
@@ -1267,7 +1269,9 @@ export const AIAgent: FC = () => {
                     <div css={rightPanelContainerStyle}>
                       <MixpanelTrackProvider
                         basicTrack={track}
-                        pageName={FLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT}
+                        pageName={
+                          FLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT
+                        }
                       >
                         <PreviewChat
                           showShareDialog={showShareAgentModalOnlyForShare(
@@ -1394,7 +1398,9 @@ export const AIAgent: FC = () => {
                 render={({ field }) => (
                   <MixpanelTrackProvider
                     basicTrack={track}
-                    pageName={FLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT}
+                    pageName={
+                      FLOWAGENT_MIXPANEL_BUILDER_PAGE_NAME.AI_AGENT_EDIT
+                    }
                   >
                     {shareDialogVisible && (
                       <ShareAgentPC

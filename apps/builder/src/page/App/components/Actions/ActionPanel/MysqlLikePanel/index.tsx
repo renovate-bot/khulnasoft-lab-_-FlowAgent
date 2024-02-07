@@ -5,7 +5,13 @@ import { isCloudVersion } from "@flowagent-public/utils"
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch, useSelector } from "react-redux"
-import { Button, Input, Select, Trigger, useMessage } from "@flowagent-design/react"
+import {
+  Button,
+  Input,
+  Select,
+  Trigger,
+  useMessage,
+} from "@flowagent-design/react"
 import OpenAIIcon from "@/assets/openai.svg?react"
 import { CodeEditor } from "@/components/CodeEditor"
 import { CODE_LANG } from "@/components/CodeEditor/CodeMirror/extensions/interface"

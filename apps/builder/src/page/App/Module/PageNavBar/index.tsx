@@ -277,7 +277,9 @@ export const PageNavBar: FC<PageNavBarProps> = (props) => {
   useEffect(() => {
     !isGuideMode &&
       canShowShareAppModal &&
-      trackInEditor(FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW, { element: "invite_entry" })
+      trackInEditor(FLOWAGENT_MIXPANEL_EVENT_TYPE.SHOW, {
+        element: "invite_entry",
+      })
   }, [canShowShareAppModal, isGuideMode])
 
   return (

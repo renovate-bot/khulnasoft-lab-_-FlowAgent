@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor, globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, getColor, globalColor } from "@flowagent-design/react"
 import { LEFT_PANEL_WIDTH, NAVBAR_HEIGHT, RIGHT_PANEL_WIDTH } from "@/style"
 
 export const editorContainerStyle = css`

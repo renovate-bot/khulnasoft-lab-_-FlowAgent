@@ -4,8 +4,8 @@ import rehypeRaw from "rehype-raw"
 import rehypeSanitize from "rehype-sanitize"
 import remarkGfm from "remark-gfm"
 import {
-  Heading,
   Text as FLOWAGENTText,
+  Heading,
   Link,
   Paragraph,
   Typography,

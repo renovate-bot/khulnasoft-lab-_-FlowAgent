@@ -97,7 +97,9 @@ export const TransformWidgetWrapper: FC<TransformWidgetProps> = memo(
     )
 
     const deleteComponentRuntimeProps = useCallback(() => {
-      FLOWAGENTEditorRuntimePropsCollectorInstance.deleteRuntimeProp(displayName)
+      FLOWAGENTEditorRuntimePropsCollectorInstance.deleteRuntimeProp(
+        displayName,
+      )
     }, [displayName])
 
     const {

@@ -64,8 +64,9 @@ const FLOWAGENTDrivePanel: FC = () => {
       FLOWAGENTDriveListAllContentInitial
     if (
       cachedAction.resourceID === selectedAction.resourceID &&
-      (selectedAction.content as FLOWAGENTDriveAction<FLOWAGENTDriveActionTypeContent>)
-        .operation === value
+      (
+        selectedAction.content as FLOWAGENTDriveAction<FLOWAGENTDriveActionTypeContent>
+      ).operation === value
     ) {
       newCommandArgs = (
         selectedAction.content as FLOWAGENTDriveAction<FLOWAGENTDriveActionTypeContent>

@@ -20,7 +20,11 @@ import { get, isString } from "lodash-es"
 import { FC } from "react"
 import { useSelector } from "react-redux"
 import { v4 } from "uuid"
-import { MenuItemProps, MenuItemType, SubMenuProps } from "@flowagent-design/react"
+import {
+  MenuItemProps,
+  MenuItemType,
+  SubMenuProps,
+} from "@flowagent-design/react"
 import { SetterMenuItem } from "@/page/App/components/InspectPanel/PanelSetters/MenuSetter/MenuOptionSetter/setterMenuItem"
 import { SetterSubMenu } from "@/page/App/components/InspectPanel/PanelSetters/MenuSetter/MenuOptionSetter/setterSubMenu"
 import { getExecutionResult } from "@/redux/currentApp/executionTree/executionSelector"

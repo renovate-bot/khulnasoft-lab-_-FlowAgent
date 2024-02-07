@@ -699,7 +699,8 @@ export const generatorEventHandlerConfig = (
         expectedType: VALIDATION_TYPES.STRING,
         attrName: "fileName",
         bindAttrName: ["actionType"],
-        shown: (type) => type === "downloadFile" || type === "saveToFLOWAGENTDrive",
+        shown: (type) =>
+          type === "downloadFile" || type === "saveToFLOWAGENTDrive",
       },
       {
         id: `${baseWidgetName}-interaction-event-handler-fileData`,
@@ -737,7 +738,8 @@ export const generatorEventHandlerConfig = (
         attrName: "fileType",
         bindAttrName: ["actionType"],
         defaultValue: "auto",
-        shown: (type) => type === "downloadFile" || type === "saveToFLOWAGENTDrive",
+        shown: (type) =>
+          type === "downloadFile" || type === "saveToFLOWAGENTDrive",
         options: [
           {
             label: i18n.t("editor.inspect.setter_option.file_download.auto"),
@@ -793,7 +795,8 @@ export const generatorEventHandlerConfig = (
         useCustomLayout: true,
         openDynamic: true,
         shown: (type) =>
-          type === "downloadFromFLOWAGENTDrive" || type === "saveToFLOWAGENTDrive",
+          type === "downloadFromFLOWAGENTDrive" ||
+          type === "saveToFLOWAGENTDrive",
       },
       {
         id: `${baseWidgetName}-interaction-event-handler-folder-path`,

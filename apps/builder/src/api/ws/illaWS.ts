@@ -38,8 +38,14 @@ export interface WSMessageListener {
     context: FLOWAGENT_WEBSOCKET_CONTEXT,
     ws: FLOWAGENTWebsocket,
   ) => void
-  onError?: (context: FLOWAGENT_WEBSOCKET_CONTEXT, ws: FLOWAGENTWebsocket) => void
-  onClosed?: (context: FLOWAGENT_WEBSOCKET_CONTEXT, ws: FLOWAGENTWebsocket) => void
+  onError?: (
+    context: FLOWAGENT_WEBSOCKET_CONTEXT,
+    ws: FLOWAGENTWebsocket,
+  ) => void
+  onClosed?: (
+    context: FLOWAGENT_WEBSOCKET_CONTEXT,
+    ws: FLOWAGENTWebsocket,
+  ) => void
 }
 
 export const ReduxMessageListener: WSMessageListener = {

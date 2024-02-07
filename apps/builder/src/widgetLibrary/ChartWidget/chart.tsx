@@ -24,7 +24,7 @@ import {
 import { get, groupBy as groupByFunc } from "lodash-es"
 import { FC, useMemo, useRef } from "react"
 import { Doughnut, Pie, Radar, Chart as ReactChart } from "react-chartjs-2"
-import { globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, globalColor } from "@flowagent-design/react"
 import { CHART_COLOR_TYPE_CONFIG } from "@/page/App/components/InspectPanel/PanelSetters/ChartSetter/chartDatasetsSetter/listItem"
 import { formatDataAsObject } from "@/utils/formatData"
 import {
@@ -119,7 +119,8 @@ export const Chart: FC<ChartWidgetProps> = (props) => {
           },
           grid: {
             color:
-              horizontalColor || globalColor(`--${flowagentPrefix}-grayBlue-09`),
+              horizontalColor ||
+              globalColor(`--${flowagentPrefix}-grayBlue-09`),
             borderColor: globalColor(`--${flowagentPrefix}-grayBlue-09`),
             tickColor: globalColor(`--${flowagentPrefix}-grayBlue-04`),
           },
@@ -143,7 +144,8 @@ export const Chart: FC<ChartWidgetProps> = (props) => {
             },
           },
           grid: {
-            color: verticalColor || globalColor(`--${flowagentPrefix}-grayBlue-09`),
+            color:
+              verticalColor || globalColor(`--${flowagentPrefix}-grayBlue-09`),
             borderColor: globalColor(`--${flowagentPrefix}-grayBlue-09`),
             tickColor: globalColor(`--${flowagentPrefix}-grayBlue-04`),
           },

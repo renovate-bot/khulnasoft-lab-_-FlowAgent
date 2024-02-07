@@ -1,5 +1,5 @@
 import { css, keyframes } from "@emotion/react"
-import { globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, globalColor } from "@flowagent-design/react"
 import { leftPanelStyle, navbarStyle, rightPanelStyle } from "@/page/App/style"
 import { LEFT_PANEL_WIDTH, NAVBAR_HEIGHT, RIGHT_PANEL_WIDTH } from "@/style"
 

@@ -1,7 +1,12 @@
 import { convertPathToString } from "@flowagent-public/dynamic-string"
 import { toPath } from "lodash-es"
 import { FC, useCallback, useMemo } from "react"
-import { Image, Menu, MenuItemProps, SubMenuProps } from "@flowagent-design/react"
+import {
+  Image,
+  Menu,
+  MenuItemProps,
+  SubMenuProps,
+} from "@flowagent-design/react"
 import {
   applyMenuBrandContainerStyle,
   applyMenuTitleStyle,

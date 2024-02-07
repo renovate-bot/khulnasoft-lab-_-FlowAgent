@@ -1,6 +1,6 @@
 import { SerializedStyles, css } from "@emotion/react"
 import { Variants } from "framer-motion"
-import { getColor, globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, getColor, globalColor } from "@flowagent-design/react"
 
 const getPanelBarHeaderHeight = (size: "default" | "small") => {
   switch (size) {
@@ -27,7 +27,8 @@ const getPanelBarHeaderBorder = (size: "default" | "small") => {
     case "default": {
       return css`
         &:not(:first-of-type) {
-          border-top: 1px solid ${globalColor(`--${flowagentPrefix}-grayBlue-08`)};
+          border-top: 1px solid
+            ${globalColor(`--${flowagentPrefix}-grayBlue-08`)};
         }
       `
     }

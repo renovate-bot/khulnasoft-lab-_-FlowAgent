@@ -1,5 +1,8 @@
 import { getFileIconByContentType } from "@flowagent-public/icon"
-import { GCS_OBJECT_TYPE, IFLOWAGENTFileInfo } from "@flowagent-public/public-types"
+import {
+  GCS_OBJECT_TYPE,
+  IFLOWAGENTFileInfo,
+} from "@flowagent-public/public-types"
 import VirtualList from "rc-virtual-list"
 import { FC, MouseEvent, useCallback, useRef } from "react"
 import { useTranslation } from "react-i18next"

@@ -1,4 +1,7 @@
-import { ActionContent, TransformerAction } from "@flowagent-public/public-types"
+import {
+  ActionContent,
+  TransformerAction,
+} from "@flowagent-public/public-types"
 import { ActionItem } from "@flowagent-public/public-types"
 import { getNewWidgetPropsByUpdateSlice } from "../componentNode"
 import { VALIDATION_TYPES } from "../validationFactory"

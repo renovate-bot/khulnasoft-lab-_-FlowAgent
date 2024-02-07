@@ -549,9 +549,9 @@ export const AIAgentRunPC: FC = () => {
                   )
                   await createAction(appInfoResp.data.appId, agentActionInfo)
                   window.open(
-                    `${getFLOWAGENTBuilderURL()}/${currentTeamInfo.identifier}/app/${
-                      appInfoResp.data.appId
-                    }`,
+                    `${getFLOWAGENTBuilderURL()}/${
+                      currentTeamInfo.identifier
+                    }/app/${appInfoResp.data.appId}`,
                     "_blank",
                   )
                 } catch {
@@ -580,12 +580,16 @@ export const AIAgentRunPC: FC = () => {
               css={backMenuStyle}
               onClick={() => {
                 if (
-                  document.referrer.includes(import.meta.env.FLOWAGENT_CLOUD_URL)
+                  document.referrer.includes(
+                    import.meta.env.FLOWAGENT_CLOUD_URL,
+                  )
                 ) {
                   return (location.href = `${getFLOWAGENTCloudURL()}/workspace/${ownerTeamIdentifier}/ai-agents`)
                 }
                 if (
-                  document.referrer.includes(import.meta.env.FLOWAGENT_MARKET_URL) &&
+                  document.referrer.includes(
+                    import.meta.env.FLOWAGENT_MARKET_URL,
+                  ) &&
                   agentID
                 ) {
                   return (location.href = `${

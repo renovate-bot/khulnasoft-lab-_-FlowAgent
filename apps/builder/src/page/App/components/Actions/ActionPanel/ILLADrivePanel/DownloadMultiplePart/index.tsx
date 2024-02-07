@@ -6,7 +6,9 @@ import { InputEditor } from "@/page/App/components/Actions/InputEditor"
 import { VALIDATION_TYPES } from "@/utils/validationFactory"
 import { FLOWAGENTDriveActionPartProps } from "../interface"
 
-export const DownloadMultiplePart: FC<FLOWAGENTDriveActionPartProps> = (props) => {
+export const DownloadMultiplePart: FC<FLOWAGENTDriveActionPartProps> = (
+  props,
+) => {
   const { t } = useTranslation()
   const commandArgs = props.commandArgs as FLOWAGENTDriveDownloadMultipleContent
   const { handleOptionsValueChange } = props

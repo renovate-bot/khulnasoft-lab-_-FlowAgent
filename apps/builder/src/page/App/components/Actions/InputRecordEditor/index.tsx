@@ -5,8 +5,8 @@ import {
   Button,
   DeleteIcon,
   Input,
-  globalColor,
   flowagentPrefix,
+  globalColor,
 } from "@flowagent-design/react"
 import { InputRecordEditorProps } from "./interface"
 import {
@@ -108,7 +108,9 @@ export const InputRecordEditor: FC<InputRecordEditorProps> = (props) => {
             variant="text"
             onClick={onAdd}
             leftIcon={
-              <AddIcon color={globalColor(`--${flowagentPrefix}-techPurple-03`)} />
+              <AddIcon
+                color={globalColor(`--${flowagentPrefix}-techPurple-03`)}
+              />
             }
           >
             {t("editor.action.panel.btn.new")}

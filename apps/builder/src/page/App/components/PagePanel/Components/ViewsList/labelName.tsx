@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next"
 import {
   Trigger,
   WarningCircleIcon,
-  globalColor,
   flowagentPrefix,
+  globalColor,
 } from "@flowagent-design/react"
 import { LabelNameAndDragIconProps } from "./interface"
 import {

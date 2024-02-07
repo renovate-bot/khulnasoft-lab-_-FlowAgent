@@ -8,7 +8,10 @@ import {
   getPlanUtils,
 } from "@flowagent-public/user-data"
 import { canManage } from "@flowagent-public/user-role-utils"
-import { ACTION_MANAGE, ATTRIBUTE_GROUP } from "@flowagent-public/user-role-utils"
+import {
+  ACTION_MANAGE,
+  ATTRIBUTE_GROUP,
+} from "@flowagent-public/user-role-utils"
 import { Unsubscribe } from "@reduxjs/toolkit"
 import { motion, useAnimation } from "framer-motion"
 import { FC, MouseEvent, useCallback, useEffect } from "react"

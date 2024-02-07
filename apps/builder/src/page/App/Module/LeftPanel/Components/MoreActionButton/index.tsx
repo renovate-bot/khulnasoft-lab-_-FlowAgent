@@ -1,5 +1,5 @@
-import IconHotSpot from "@flowagent-public/icon-hot-spot"
 import { isFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
+import IconHotSpot from "@flowagent-public/icon-hot-spot"
 import { FLOWAGENT_MIXPANEL_EVENT_TYPE } from "@flowagent-public/mixpanel-utils"
 import { useUpgradeModal } from "@flowagent-public/upgrade-modal"
 import { getCurrentTeamInfo, getPlanUtils } from "@flowagent-public/user-data"

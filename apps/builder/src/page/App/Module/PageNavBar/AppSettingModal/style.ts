@@ -1,5 +1,10 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { getColor, globalColor, flowagentPrefix, zIndex } from "@flowagent-design/react"
+import {
+  flowagentPrefix,
+  getColor,
+  globalColor,
+  zIndex,
+} from "@flowagent-design/react"
 
 export const modalWrapperStyle = css`
   padding: 24px 24px 0;

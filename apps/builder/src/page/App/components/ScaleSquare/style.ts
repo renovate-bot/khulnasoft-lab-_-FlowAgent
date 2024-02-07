@@ -1,11 +1,13 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { getColor, globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, getColor, globalColor } from "@flowagent-design/react"
 import { ScaleSquareType } from "@/page/App/components/ScaleSquare/interface"
 
 export type BarPosition = "l" | "r" | "t" | "b" | "tl" | "tr" | "bl" | "br"
 
 export function getSelectedColor(selected: boolean): string {
-  return selected ? globalColor(`--${flowagentPrefix}-techPurple-03`) : "transparent"
+  return selected
+    ? globalColor(`--${flowagentPrefix}-techPurple-03`)
+    : "transparent"
 }
 
 export function applySquarePointerStyle(

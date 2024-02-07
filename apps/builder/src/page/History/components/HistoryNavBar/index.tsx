@@ -1,4 +1,7 @@
-import { getFLOWAGENTBuilderURL, getFLOWAGENTCloudURL } from "@flowagent-public/utils"
+import {
+  getFLOWAGENTBuilderURL,
+  getFLOWAGENTCloudURL,
+} from "@flowagent-public/utils"
 import { FC } from "react"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"

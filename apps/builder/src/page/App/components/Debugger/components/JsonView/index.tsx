@@ -1,6 +1,11 @@
 import { motion } from "framer-motion"
 import { FC, useState } from "react"
-import { CaretRightIcon, isArray, isObject, isString } from "@flowagent-design/react"
+import {
+  CaretRightIcon,
+  isArray,
+  isObject,
+  isString,
+} from "@flowagent-design/react"
 import { applyJsonValueColorStyle } from "@/page/App/Module/DataWorkspace/style"
 import {
   applyExpandIconStyle,

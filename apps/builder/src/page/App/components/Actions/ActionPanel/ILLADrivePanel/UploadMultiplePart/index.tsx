@@ -8,7 +8,9 @@ import { SingleTypeComponent } from "../../SingleTypeComponent"
 import FolderSelect from "../components/FolderSelect"
 import { FLOWAGENTDriveActionPartProps } from "../interface"
 
-export const UploadMultiplePart: FC<FLOWAGENTDriveActionPartProps> = (props) => {
+export const UploadMultiplePart: FC<FLOWAGENTDriveActionPartProps> = (
+  props,
+) => {
   const { t } = useTranslation()
 
   const commandArgs = props.commandArgs as FLOWAGENTDriveUploadMultipleContent

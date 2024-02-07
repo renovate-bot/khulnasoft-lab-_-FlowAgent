@@ -1,6 +1,6 @@
 import { SerializedStyles, css } from "@emotion/react"
 import { applyMobileStyle } from "@flowagent-public/utils"
-import { globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, globalColor } from "@flowagent-design/react"
 import { columnCenter } from "@/style"
 
 export const menuWrapperStyle = css`

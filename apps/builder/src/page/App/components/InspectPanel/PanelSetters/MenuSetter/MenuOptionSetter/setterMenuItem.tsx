@@ -2,7 +2,12 @@ import { useSortable } from "@dnd-kit/sortable"
 import { CSS } from "@dnd-kit/utilities"
 import { FC, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Button, DragPointIcon, Trigger, getColor } from "@flowagent-design/react"
+import {
+  Button,
+  DragPointIcon,
+  Trigger,
+  getColor,
+} from "@flowagent-design/react"
 import { SetterMenuItemProps } from "@/page/App/components/InspectPanel/PanelSetters/MenuSetter/MenuOptionSetter/interface"
 import {
   deleteButtonContainer,

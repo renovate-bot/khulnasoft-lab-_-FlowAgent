@@ -1,6 +1,9 @@
 import { getCurrentTeamInfo, getPlanUtils } from "@flowagent-public/user-data"
 import { canManage } from "@flowagent-public/user-role-utils"
-import { ACTION_MANAGE, ATTRIBUTE_GROUP } from "@flowagent-public/user-role-utils"
+import {
+  ACTION_MANAGE,
+  ATTRIBUTE_GROUP,
+} from "@flowagent-public/user-role-utils"
 import { Unsubscribe } from "@reduxjs/toolkit"
 import { FC, useCallback, useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"

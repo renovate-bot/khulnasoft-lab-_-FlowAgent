@@ -1,4 +1,8 @@
-import { AI_AGENT_MODEL, AI_AGENT_TYPE, Agent } from "@flowagent-public/public-types"
+import {
+  AI_AGENT_MODEL,
+  AI_AGENT_TYPE,
+  Agent,
+} from "@flowagent-public/public-types"
 
 export const AgentInitial: Agent = {
   name: "",

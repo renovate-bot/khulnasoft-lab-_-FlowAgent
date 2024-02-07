@@ -49,7 +49,9 @@ export const TransformWidgetWrapperWithJson: FC<TransformWidgetWrapperWithJsonPr
     )
 
     const deleteComponentRuntimeProps = useCallback(() => {
-      FLOWAGENTEditorRuntimePropsCollectorInstance.deleteRuntimeProp(displayName)
+      FLOWAGENTEditorRuntimePropsCollectorInstance.deleteRuntimeProp(
+        displayName,
+      )
     }, [displayName])
 
     const realProps = useMemo(() => nodeProps ?? {}, [nodeProps])

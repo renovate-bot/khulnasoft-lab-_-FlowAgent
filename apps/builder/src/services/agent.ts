@@ -1,4 +1,7 @@
-import { agentRequest, marketplaceRequest } from "@flowagent-public/flowagent-net"
+import {
+  agentRequest,
+  marketplaceRequest,
+} from "@flowagent-public/flowagent-net"
 import { Agent, AgentRaw } from "@flowagent-public/public-types"
 import { v4 } from "uuid"
 import { base642Blob, getFileExtensionFromBase64 } from "@/utils/file"

@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { getColor, globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, getColor, globalColor } from "@flowagent-design/react"
 
 export const viewsListWrapperStyle = css`
   display: flex;

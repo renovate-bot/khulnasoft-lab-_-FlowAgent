@@ -1,5 +1,5 @@
 import { SerializedStyles, css } from "@emotion/react"
-import { globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, globalColor } from "@flowagent-design/react"
 
 export function applyUserAvatarStyle(
   background: string,

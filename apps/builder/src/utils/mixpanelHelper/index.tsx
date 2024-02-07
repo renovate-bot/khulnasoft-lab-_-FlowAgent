@@ -150,7 +150,10 @@ const getPageName = () => {
 export const track = (
   event: FLOWAGENT_MIXPANEL_EVENT_TYPE,
   pageName: FLOWAGENT_PAGE_NAME,
-  properties: Omit<FLOWAGENTProperties, "parameter11" | "team_id" | "page"> = {},
+  properties: Omit<
+    FLOWAGENTProperties,
+    "parameter11" | "team_id" | "page"
+  > = {},
 ) => {
   const { teamIdentifier } = getInfoFromUrl()
   const { role } = getTeamInfo()

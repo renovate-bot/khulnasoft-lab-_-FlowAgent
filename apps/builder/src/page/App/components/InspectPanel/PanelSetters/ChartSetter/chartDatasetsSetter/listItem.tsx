@@ -4,8 +4,8 @@ import {
   EyeOffIcon,
   EyeOnIcon,
   Trigger,
-  globalColor,
   flowagentPrefix,
+  globalColor,
   useModal,
 } from "@flowagent-design/react"
 import DeleteIcon from "@/assets/delete-dataset-icon.svg?react"

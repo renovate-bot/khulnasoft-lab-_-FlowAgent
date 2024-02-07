@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, globalColor } from "@flowagent-design/react"
 
 const getLabelSizeFontStyle = (size: "big" | "small") => {
   switch (size) {
@@ -22,7 +22,8 @@ export function labelStyle(size: "big" | "small", disabledTooltip: boolean) {
   const borderStyle = disabledTooltip
     ? null
     : css`
-        border-bottom: 1px dashed ${globalColor(`--${flowagentPrefix}-grayBlue-03`)};
+        border-bottom: 1px dashed
+          ${globalColor(`--${flowagentPrefix}-grayBlue-03`)};
       `
   return css`
     font-weight: 500;

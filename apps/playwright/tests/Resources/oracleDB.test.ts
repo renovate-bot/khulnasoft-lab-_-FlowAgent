@@ -2,7 +2,9 @@ import { test } from "@playwright/test"
 
 test.describe("OracleDB create And delete", () => {
   test.beforeEach("Show create Modal", async ({ page }) => {
-    await page.goto(`/${process.env.FLOWAGENT_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
+    await page.goto(
+      `/${process.env.FLOWAGENT_CLOUD_TEAM_IDENTITY}/dashboard/apps`,
+    )
     await page.getByText("Resources").click()
     await page.getByRole("button", { name: "Create New" }).click()
   })
@@ -16,18 +18,24 @@ test.describe("OracleDB create And delete", () => {
       .getByPlaceholder('i.e."Users DB(readonly)" or "Internal Admin API"')
       .fill("test")
     await page.getByPlaceholder("Hostname").click()
-    await page.getByPlaceholder("Hostname").fill(process.env.FLOWAGENT_ORACLE_HOST)
+    await page
+      .getByPlaceholder("Hostname")
+      .fill(process.env.FLOWAGENT_ORACLE_HOST)
     await page.getByPlaceholder("1521").click()
     await page.getByPlaceholder("1521").fill(process.env.FLOWAGENT_ORACLE_PORT)
     await page.locator("label").filter({ hasText: "SID" }).click()
     await page.getByPlaceholder("oracle").click()
-    await page.getByPlaceholder("oracle").fill(process.env.FLOWAGENT_ORACLE_USERNAME)
+    await page
+      .getByPlaceholder("oracle")
+      .fill(process.env.FLOWAGENT_ORACLE_USERNAME)
     await page.getByPlaceholder("••••••••").click()
     await page
       .getByPlaceholder("••••••••")
       .fill(process.env.FLOWAGENT_ORACLE_PASSWORD)
     await page.getByPlaceholder("default").click()
-    await page.getByPlaceholder("default").fill(process.env.FLOWAGENT_ORACLE_NAME)
+    await page
+      .getByPlaceholder("default")
+      .fill(process.env.FLOWAGENT_ORACLE_NAME)
     await page
       .locator("div")
       .filter({ hasText: /^Use SSL when available$/ })

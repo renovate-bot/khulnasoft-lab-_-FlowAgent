@@ -2,7 +2,9 @@ import { test } from "@playwright/test"
 
 test.describe("GoogleSheets create And delete", () => {
   test.beforeEach("Show create Modal", async ({ page }) => {
-    await page.goto(`/${process.env.FLOWAGENT_CLOUD_TEAM_IDENTITY}/dashboard/apps`)
+    await page.goto(
+      `/${process.env.FLOWAGENT_CLOUD_TEAM_IDENTITY}/dashboard/apps`,
+    )
     await page.getByText("Resources").click()
     await page.getByRole("button", { name: "Create New" }).click()
   })

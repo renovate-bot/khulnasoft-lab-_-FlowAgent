@@ -14,7 +14,10 @@ export const MORE_DATA_TYPE_SELF_HOST: ActionType[] = [
   "globalData",
 ]
 
-export const ONLY_CLOUD_MODE_DATA_TYPE: ActionType[] = ["aiagent", "flowagentdrive"]
+export const ONLY_CLOUD_MODE_DATA_TYPE: ActionType[] = [
+  "aiagent",
+  "flowagentdrive",
+]
 
 export const RECOMMEND_RESOURCES_CLOUD: ActionType[] = [
   "restapi",

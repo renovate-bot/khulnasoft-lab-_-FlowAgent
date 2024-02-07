@@ -37,7 +37,8 @@ export const runActionErrorForColla = (
     if (
       actionContent.operation ===
         FLOWAGENT_DRIVE_ACTION_REQUEST_TYPE.DOWNLOAD_MULTIPLE ||
-      actionContent.operation === FLOWAGENT_DRIVE_ACTION_REQUEST_TYPE.DOWNLOAD_ONE
+      actionContent.operation ===
+        FLOWAGENT_DRIVE_ACTION_REQUEST_TYPE.DOWNLOAD_ONE
     ) {
       return handleCollaPurchaseError(
         error,
@@ -49,7 +50,8 @@ export const runActionErrorForColla = (
       )
     } else if (
       actionContent.operation === FLOWAGENT_DRIVE_ACTION_REQUEST_TYPE.UPLOAD ||
-      actionContent.operation === FLOWAGENT_DRIVE_ACTION_REQUEST_TYPE.UPLOAD_MULTIPLE
+      actionContent.operation ===
+        FLOWAGENT_DRIVE_ACTION_REQUEST_TYPE.UPLOAD_MULTIPLE
     ) {
       return handleCollaPurchaseError(
         error,

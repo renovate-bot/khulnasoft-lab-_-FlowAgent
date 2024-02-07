@@ -1,4 +1,7 @@
-import { ERROR_FLAG, isFLOWAGENTAPiError } from "@flowagent-public/flowagent-net"
+import {
+  ERROR_FLAG,
+  isFLOWAGENTAPiError,
+} from "@flowagent-public/flowagent-net"
 import { LoginPage } from "@flowagent-public/sso-module"
 import { LoginFields } from "@flowagent-public/sso-module/LoginPage/interface"
 import { setAuthToken } from "@flowagent-public/utils"

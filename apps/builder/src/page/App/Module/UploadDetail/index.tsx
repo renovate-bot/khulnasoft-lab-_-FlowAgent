@@ -1,6 +1,11 @@
 import { motion } from "framer-motion"
 import { FC, useState, useSyncExternalStore } from "react"
-import { ClearIcon, Loading, SuccessIcon, UploadIcon } from "@flowagent-design/react"
+import {
+  ClearIcon,
+  Loading,
+  SuccessIcon,
+  UploadIcon,
+} from "@flowagent-design/react"
 import { ProcessDetailModal } from "./components/ProcessDetailModal"
 import { updateFileDetailStore } from "./store"
 import {

@@ -22,7 +22,9 @@ import { HintToolTip } from "@/components/CodeEditor/HintToolTip"
 import { VALIDATION_TYPES } from "@/utils/validationFactory"
 
 // thk ReactCodeMirror:https://github.com/uiwjs/react-codemirror
-export const FLOWAGENTCodeMirrorCore: FC<FLOWAGENTCodeMirrorProps> = (props) => {
+export const FLOWAGENTCodeMirrorCore: FC<FLOWAGENTCodeMirrorProps> = (
+  props,
+) => {
   const {
     className,
     extensions = [],

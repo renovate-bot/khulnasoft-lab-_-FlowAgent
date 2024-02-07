@@ -1,6 +1,6 @@
 import { SerializedStyles, css } from "@emotion/react"
 import { Variants } from "framer-motion"
-import { globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, globalColor } from "@flowagent-design/react"
 
 export const errorContainerStyle = css`
   background-color: ${globalColor(`--${flowagentPrefix}-techPink-08`)};

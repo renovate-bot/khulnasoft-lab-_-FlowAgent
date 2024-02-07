@@ -33,8 +33,16 @@ export const globalStyle = css`
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: Inter, -apple-system, BlinkMacSystemFont, PingFang SC,
-      Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family:
+      Inter,
+      -apple-system,
+      BlinkMacSystemFont,
+      PingFang SC,
+      Microsoft YaHei,
+      Helvetica Neue,
+      Helvetica,
+      Arial,
+      sans-serif;
   }
 
   * {

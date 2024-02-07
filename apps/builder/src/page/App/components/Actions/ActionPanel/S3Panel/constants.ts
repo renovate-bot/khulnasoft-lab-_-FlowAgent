@@ -1,4 +1,7 @@
-import { S3ActionRequestType, S3_CONTENT_TYPE } from "@flowagent-public/public-types"
+import {
+  S3ActionRequestType,
+  S3_CONTENT_TYPE,
+} from "@flowagent-public/public-types"
 
 enum S3ActionType {
   LIST_ALL = "List all objects in bucket",

@@ -118,7 +118,8 @@ export const fixedWsURL = (wsURL: string) => {
 }
 
 export class Connection {
-  static roomMap: Map<string, FLOWAGENTWebsocket | FLOWAGENTBinaryWebsocket> = new Map()
+  static roomMap: Map<string, FLOWAGENTWebsocket | FLOWAGENTBinaryWebsocket> =
+    new Map()
 
   static enterDashboardRoom(wsURL: string) {
     let ws = generateTextMessageWs(wsURL, FLOWAGENT_WEBSOCKET_CONTEXT.DASHBOARD)
@@ -154,7 +155,9 @@ export class Connection {
     type: RoomType,
     roomId: string,
   ): FLOWAGENTBinaryWebsocket | undefined {
-    return this.roomMap.get(`${type}/${roomId}/binary`) as FLOWAGENTBinaryWebsocket
+    return this.roomMap.get(
+      `${type}/${roomId}/binary`,
+    ) as FLOWAGENTBinaryWebsocket
   }
 
   static leaveRoom(type: RoomType, roomId: string) {
@@ -193,5 +196,8 @@ export function generateTextMessageWs(
 }
 
 export function generateBinaryMessageWs(url: string) {
-  return new FLOWAGENTBinaryWebsocket(url, FLOWAGENT_WEBSOCKET_CONTEXT.APP_BINARY)
+  return new FLOWAGENTBinaryWebsocket(
+    url,
+    FLOWAGENT_WEBSOCKET_CONTEXT.APP_BINARY,
+  )
 }

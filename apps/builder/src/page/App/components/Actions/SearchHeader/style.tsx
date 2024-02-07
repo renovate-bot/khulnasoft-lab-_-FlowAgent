@@ -1,6 +1,6 @@
 import { css } from "@emotion/react"
 import chroma from "chroma-js"
-import { getColor, globalColor, flowagentPrefix } from "@flowagent-design/react"
+import { flowagentPrefix, getColor, globalColor } from "@flowagent-design/react"
 
 export const searchHeaderStyle = css`
   width: 100%;
@@ -30,7 +30,9 @@ export const searchInputStyle = css`
 
   & > span {
     border-radius: 8px !important;
-    border-color: ${globalColor(`--${flowagentPrefix}-techPurple-03`)} !important;
+    border-color: ${globalColor(
+      `--${flowagentPrefix}-techPurple-03`,
+    )} !important;
     box-shadow: 0 0 8px 0
       ${chroma(globalColor(`--${flowagentPrefix}-techPurple-03`))
         .alpha(0.2)

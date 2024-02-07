@@ -6,8 +6,8 @@ import {
   DragPointIcon,
   Trigger,
   WarningCircleIcon,
-  globalColor,
   flowagentPrefix,
+  globalColor,
 } from "@flowagent-design/react"
 import DocIcon from "@/assets/doc.svg?react"
 import { SCROLL_CONTAINER_PADDING } from "@/page/App/components/DotPanel/constant/canvas"

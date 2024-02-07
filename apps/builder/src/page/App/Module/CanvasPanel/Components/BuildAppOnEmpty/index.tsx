@@ -1,4 +1,7 @@
-import { CARD_NORMAL_WIDTH, fetchTemplateList } from "@flowagent-public/create-app"
+import {
+  CARD_NORMAL_WIDTH,
+  fetchTemplateList,
+} from "@flowagent-public/create-app"
 import IconHotSpot from "@flowagent-public/icon-hot-spot"
 import { ProductMarketApp } from "@flowagent-public/market-app"
 import {
